@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IPPNIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="IPPNIO.xsd"><CtlrParas><CtlrIP d1="192" d2="168" d3="1" d4="130" ExCRC="1"/><CtlrMask d1="255" d2="255" d3="255" d4="0" ExCRC="1"/><CtlrGate d1="192" d2="168" d3="1" d4="100" ExCRC="1"/><StatN>ilc130eth</StatN><Station ExCRC="1"></Station><DevName ExCRC="1"></DevName><ModEquId ExCRC="1"></ModEquId><FDCMLFile>ETHERNET\Phoenix Contact\ilc_130_ethmce_dtmv01_3.90.xml</FDCMLFile></CtlrParas></IPPNIO>

@@ -1,0 +1,166 @@
+(*
+T: FUNCTION_BLOCK Move_Mix_Vert
+FW: NO
+CI#: 39
+QSL: 26
+QVE: 26
+QVPC: 26
+QPar: 0
+QFBI: 3
+*)
+@V 1 6 0
+Select_Position_Mix_Vert_1	1	VAR	@FB:60
+		     
+
+;
+
+@V 1 11 0
+Q_0_2_1_5	2	VAR_EXTERNAL	@TYP:1
+@RV 129		     
+
+;
+
+@V 1 12 0
+MixVertStop	3	VAR_EXTERNAL	@TYP:1
+@RV 202		     
+
+;
+
+@V 1 13 0
+MixPosUpAut	4	VAR_EXTERNAL	@TYP:1
+@RV 247		     
+
+;
+
+@V 1 14 0
+MixPosDownAut	5	VAR_EXTERNAL	@TYP:1
+@RV 248		     
+
+;
+
+@V 1 15 0
+MixPos6Aut	6	VAR_EXTERNAL	@TYP:1
+@RV 249		     
+
+;
+
+@V 1 16 0
+MixPos5Aut	7	VAR_EXTERNAL	@TYP:1
+@RV 250		     
+
+;
+
+@V 1 17 0
+MixPos4Aut	8	VAR_EXTERNAL	@TYP:1
+@RV 240		     
+
+;
+
+@V 1 18 0
+MixPos3Aut	9	VAR_EXTERNAL	@TYP:1
+@RV 239		     
+
+;
+
+@V 1 19 0
+MixPos2Aut	10	VAR_EXTERNAL	@TYP:1
+@RV 238		     
+
+;
+
+@V 1 20 0
+MixPos1Aut	11	VAR_EXTERNAL	@TYP:1
+@RV 242		     
+
+;
+
+@V 1 21 0
+MixVertRelRobotAut	12	VAR_EXTERNAL	@TYP:1
+@RV 244		     
+
+;
+
+@V 1 22 0
+MixVertRefAut	13	VAR_EXTERNAL	@TYP:1
+@RV 251		     
+
+;
+
+@V 1 23 0
+MixVertStartAut	14	VAR_EXTERNAL	@TYP:1
+@RV 241		     
+
+;
+
+@V 1 28 0
+RS_1	15	VAR	@FB:46
+		     
+
+;
+
+@V 1 29 0
+TON_1	16	VAR	@FB:58
+		     
+
+;
+
+@V 1 34 0
+MixPosUp	17	VAR_EXTERNAL	@TYP:1
+@RV 160		     
+
+;
+
+@V 1 35 0
+MixPosDown	18	VAR_EXTERNAL	@TYP:1
+@RV 161		     
+
+;
+
+@V 1 36 0
+MixPos6	19	VAR_EXTERNAL	@TYP:1
+@RV 166		     
+
+;
+
+@V 1 37 0
+MixPos5	20	VAR_EXTERNAL	@TYP:1
+@RV 165		     
+
+;
+
+@V 1 38 0
+MixPos4	21	VAR_EXTERNAL	@TYP:1
+@RV 164		     
+
+;
+
+@V 1 39 0
+MixPos3	22	VAR_EXTERNAL	@TYP:1
+@RV 163		     
+
+;
+
+@V 1 40 0
+MixPos2	23	VAR_EXTERNAL	@TYP:1
+@RV 162		     
+
+;
+
+@V 1 41 0
+MixPos1	24	VAR_EXTERNAL	@TYP:1
+@RV 159		     
+
+;
+
+@V 1 42 0
+MixVertRelRobot	25	VAR_EXTERNAL	@TYP:1
+@RV 213		     
+
+;
+
+@V 1 43 0
+MixVertRef	26	VAR_EXTERNAL	@TYP:1
+@RV 210		     
+
+;
+

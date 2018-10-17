@@ -1,0 +1,107 @@
+﻿<Window x:Class="MULTIFORM_PCS.GUI.ModelicaInterfaceHelpWPF"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Title="PipelessPlant - ModelicaInterface Help" ResizeMode="NoResize" Width="800" Height="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MULTIFORM_PCS;component/GUI/Images/ModelicaInterfacePP.png"></ImageBrush>
+        </Grid.Background>
+        <Label Content="double[] digitalInputs" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="174,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="double[] digitalOutputs" Height="28" HorizontalAlignment="Left" Margin="9,264,0,0" Name="label2" VerticalAlignment="Top" Grid.Column="1" />
+        <Label Content="RealOutput digitalOutputs[]" Height="28" HorizontalAlignment="Left" Margin="92,343,0,0" Name="label3" VerticalAlignment="Top" Grid.Column="1" />
+        <Label Content="RealOutput digitalInputs[]" Height="28" HorizontalAlignment="Left" Margin="239,98,0,0" Name="label4" VerticalAlignment="Top" Grid.Row="1" />
+        <TreeView Grid.Column="1" Height="246" HorizontalAlignment="Left" Margin="11,12,0,0" Name="treeView1" VerticalAlignment="Top" Width="366" FontFamily="Akkurat Office" FontSize="12" Foreground="Black">
+            <TreeView.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="White" Offset="0.802" />
+                    <GradientStop Color="LightGray" Offset="0" />
+                </LinearGradientBrush>
+            </TreeView.Background>
+            <TreeViewItem Header="AGV" IsExpanded="True">
+                <TreeViewItem Header="1 - Forward/Backward Velocity" />
+                <TreeViewItem Header="2 - Left/Right Velocity" />
+            </TreeViewItem>
+            <TreeViewItem Header="StorageStation" IsExpanded="True">
+                <TreeViewItem Header="1 - Vertical Arm Position" />
+                <TreeViewItem Header="2 - Horizontal Arm Position" />
+                <TreeViewItem Header="3 - Magnets Vertical Arm" />
+                <TreeViewItem Header="4 - Velocity Vertical Arm" />
+                <TreeViewItem Header="5 - Velocity Horizontal Arm" />
+            </TreeViewItem>
+            <TreeViewItem Header="MixingStation" IsExpanded="True">
+                <TreeViewItem Header="1 - Vertical Arm Position" />
+                <TreeViewItem Header="2 - Gypsum Filling" />
+                <TreeViewItem Header="3 - Stirrer" />
+                <TreeViewItem Header="4 - Magnets Vertical Arm" />
+                <TreeViewItem Header="5 - Velocity Vertical Arm" />
+            </TreeViewItem>
+            <TreeViewItem Header="ColorStation" IsExpanded="True">
+                <TreeViewItem Header="1 - Filling" />
+            </TreeViewItem>
+            <TreeViewItem Header="ChargingStation" IsExpanded="True">
+                <TreeViewItem Header="1 - Charging" />
+            </TreeViewItem>
+        </TreeView>
+        <TreeView FontFamily="Akkurat Office" FontSize="12" HorizontalAlignment="Left" Margin="9,134,0,12" Name="treeView2" Width="366" Grid.Row="1">
+            <TreeView.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="White" Offset="0.802" />
+                    <GradientStop Color="LightGray" Offset="0" />
+                </LinearGradientBrush>
+            </TreeView.Background>
+            <TreeViewItem Header="AGV" IsExpanded="True">
+                <TreeViewItem Header="1 - x-Coordinate" />
+                <TreeViewItem Header="2 - y-Coordinate" />
+                <TreeViewItem Header="3 - Rotation" />
+                <TreeViewItem Header="4 - ID Carried Vessel" />
+                <TreeViewItem Header="5 - Charging Condition" />
+            </TreeViewItem>
+            <TreeViewItem Header="ColorStation" IsExpanded="True">
+                <TreeViewItem Header="1 - ID Waiting Vessel" />
+                <TreeViewItem Header="2 - Filling Rate" />
+            </TreeViewItem>
+            <TreeViewItem Header="ChargingStation" IsExpanded="True">
+                <TreeViewItem Header="1 - Charging Rate" />
+            </TreeViewItem>
+            <TreeViewItem Header="MixingStation" IsExpanded="True">
+                <TreeViewItem Header="1 - ID Held Vessel" />
+                <TreeViewItem Header="2 - Rotation Stirrer" />
+                <TreeViewItem Header="3 - Fluid Level Sensor" />
+                <TreeViewItem Header="4 - Vertical Arm Altitude" />
+                <TreeViewItem Header="5 - Filling Rate Gypsum" />
+            </TreeViewItem>
+            <TreeViewItem Header="StorageStation" IsExpanded="True">
+                <TreeViewItem Header="1 - ID Vertical Held Vessel" />
+                <TreeViewItem Header="2 - ID Stored Vessel 1" />
+                <TreeViewItem Header="3 - ID Stored Vessel 2" />
+                <TreeViewItem Header="4 - ID Stored Vessel 3" />
+                <TreeViewItem Header="5 - ID Stored Vessel 4" />
+                <TreeViewItem Header="6 - ID Stored Vessel 5" />
+                <TreeViewItem Header="7 - Vertical Arm Altitude" />
+                <TreeViewItem Header="8 - Horizontal Arm Traverse" />
+            </TreeViewItem>
+            <TreeViewItem Header="Vessel" IsExpanded="True">
+                <TreeViewItem Header="1 - Level Hard Layers" />
+                <TreeViewItem Header="2 - Level Hard and Liquid Layers" />
+                <TreeViewItem Header="3 - Volume Layer 1 Color 1" />
+                <TreeViewItem Header="4 - Volume Layer 1 Color 2" />
+                <TreeViewItem Header="5 - Volume Layer 1 Color 3" />
+                <TreeViewItem Header="6 - Volume Layer 1 Color 4" />
+                <TreeViewItem Header="7 - Volume Layer 1 Color 5" />
+                <TreeViewItem Header="8-26 - Volume Layer 2-5 Color 1-5" />
+                <TreeViewItem Header="27 - Volume Layer 5 Color 5" />
+            </TreeViewItem>
+        </TreeView>
+    </Grid>
+</Window>

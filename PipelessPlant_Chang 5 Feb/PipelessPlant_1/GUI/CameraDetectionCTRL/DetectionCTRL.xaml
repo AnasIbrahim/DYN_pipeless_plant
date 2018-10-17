@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="MULTIFORM_PCS.GUI.CameraDetectionCTRL.DetectionCTRL"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="284" d:DesignWidth="600
+             ">
+    <Grid Name="gridDetection" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0">
+            <Grid Name="gridPatternDetectionRegions" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="Max x Region Outside" Height="25" HorizontalAlignment="Left" Margin="5,5,0,0" Name="labelMaxXOutside" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,5,50,0" Name="sliderMaxXOutside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderMaxXOutside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMaxXOutside}" Height="25" HorizontalAlignment="right" Margin="0,5,5,0" Name="labelMaxXOutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="Min x Region Outside" Height="25" HorizontalAlignment="Left" Margin="5,35,0,0" Name="labelMinXOutside" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center"  />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,35,50,0" Name="sliderMinXOutside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderMinXOutside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMinXOutside}" Height="25" HorizontalAlignment="right" Margin="0,35,5,0" Name="labelMinXOutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="Max y Region Outside" Height="25" HorizontalAlignment="Left" Margin="5,65,0,0" Name="labelMaxYOutside" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,65,50,0" Name="sliderMaxYOutside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderMaxYOutside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMaxYOutside}" Height="25" HorizontalAlignment="right" Margin="0,65,5,0" Name="labelMaxYOutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+                <Label Content="Min y Region Outside" Height="25" HorizontalAlignment="Left" Margin="5,95,0,0" Name="labelMinYOutside" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,95,50,0" Name="sliderMinYOutside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderMinYOutside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMinYOutside}" Height="25" HorizontalAlignment="right" Margin="0,95,5,0" Name="labelMinYOutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+                <Label Content="Min x Region Center" Height="25" HorizontalAlignment="Left" Margin="5,125,0,0" Name="labelMinXCenter" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,125,50,0" Name="sliderMinXCenter" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderMinXCenter_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMinXCenter}" Height="25" HorizontalAlignment="right" Margin="0,125,5,0" Name="labelMinXCenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="Max x Region Center" Height="25" HorizontalAlignment="Left" Margin="5,155,0,0" Name="labelMaxXCenter" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center"  />
+                <Slider Margin="140,155,50,0" Name="sliderMaxXCenter" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderMaxXCenter_ValueChanged" Height="25" VerticalAlignment="Top" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMaxXCenter}" Height="25" HorizontalAlignment="right" Margin="0,155,5,0" Name="labelMaxXCenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="Min y Region Center" Height="25" HorizontalAlignment="Left" Margin="5,185,0,0" Name="labelMinYCenter" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,185,50,0" Name="sliderMinYCenter" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderMinYCenter_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMinYCenter}" Height="25" HorizontalAlignment="right" Margin="0,185,5,0" Name="labelMinYCenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+                <Label Content="Max y Region Center" Height="25" HorizontalAlignment="Left" Margin="5,215,0,0" Name="labelMaxYCenter" VerticalAlignment="Top" Width="130" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="140,215,50,0" Name="sliderMaxYCenter" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="1600" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderMaxYCenter_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderMaxYCenter}" Height="25" HorizontalAlignment="right" Margin="0,215,5,0" Name="labelMaxYCenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+            </Grid>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="1">
+            <Grid Name="gridPatternDetection" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Label Content="APEX to BASE Min Center" Height="25" HorizontalAlignment="Left" Margin="5,5,0,0" Name="labelAPEXBASEMin_Center" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,5,50,0" Name="sliderAPEXBASEMin_Center" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="200" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderAPEXBASEMin_Center_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASEMin_Center}" Height="25" HorizontalAlignment="right" Margin="0,5,5,0" Name="labelAPEXBASEMin_CenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="APEX to BASE Max Center" Height="25" HorizontalAlignment="Left" Margin="5,35,0,0" Name="labelAPEXBASEMax_Center" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center"  />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,35,50,0" Name="sliderAPEXBASEMax_Center" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="200" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderAPEXBASEMax_Center_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASEMax_Center}" Height="25" HorizontalAlignment="right" Margin="0,35,5,0" Name="labelAPEXBASEMax_CenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="BASE to BASE Center" Height="25" HorizontalAlignment="Left" Margin="5,65,0,0" Name="labelBASEBASE_Center" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,65,50,0" Name="sliderBASEBASE_Center" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="50" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderBASEBASE_Center_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderBASEBASE_Center}" Height="25" HorizontalAlignment="right" Margin="0,65,5,0" Name="labelBASEBASE_CenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+                <Label Content="APEX to BASE Tolerance" Height="25" HorizontalAlignment="Left" Margin="5,95,0,0" Name="labelAPEXBASETol_Center" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,95,50,0" Name="sliderAPEXBASETol_Center" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="50" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderAPEXBASETol_Center_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASETol_Center}" Height="25" HorizontalAlignment="right" Margin="0,95,5,0" Name="labelAPEXBASETol_CenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+        <Label Content="maxDistanceMarker Center" Height="25" HorizontalAlignment="Left" Margin="5,125,0,0" Name="labelMaxDistanceMarker_Center" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+        <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,125,50,0" Name="sliderMaxDistanceMarker_Center" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="200" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderMaxDistanceMarker_Center_ValueChanged" />
+        <Label Content="{Binding Path=Value, ElementName=sliderMaxDistanceMarker_Center}" Height="25" HorizontalAlignment="right" Margin="0,125,5,0" Name="labelMaxDistanceMarker_CenterValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+        <Label Content="APEX to BASE Min Outside" Height="25" HorizontalAlignment="Left" Margin="5,155,0,0" Name="labelAPEXBASEMin_Outside" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,155,50,0" Name="sliderAPEXBASEMin_Outside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="200" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderAPEXBASEMin_Outside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASEMin_Outside}" Height="25" HorizontalAlignment="right" Margin="0,155,5,0" Name="labelAPEXBASEMin_OutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="APEX to BASE Max Outside" Height="25" HorizontalAlignment="Left" Margin="5,185,0,0" Name="labelAPEXBASEMax_Outside" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center"  />
+                <Slider Margin="160,185,50,0" Name="sliderAPEXBASEMax_Outside" IsSnapToTickEnabled="True" LargeChange="5" Maximum="200" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" Height="25" VerticalAlignment="Top" ValueChanged="sliderAPEXBASEMax_Outside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASEMax_Outside}" Height="25" HorizontalAlignment="right" Margin="0,185,5,0" Name="labelAPEXBASEMax_OutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center" />
+                <Label Content="BASE to BASE Outside" Height="25" HorizontalAlignment="Left" Margin="5,215,0,0" Name="labelBASEBASE_Outside" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,215,50,0" Name="sliderBASEBASE_Outside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="50" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" ValueChanged="sliderBASEBASE_Outside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderBASEBASE_Outside}" Height="25" HorizontalAlignment="right" Margin="0,215,5,0" Name="labelBASEBASE_OutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+                <Label Content="APEX to BASE Tolerance Outside" Height="25" HorizontalAlignment="Left" Margin="5,245,0,0" Name="labelAPEXBASETol_Outside" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center" />
+                <Slider Height="25" HorizontalAlignment="Stretch" Margin="160,245,50,0" Name="sliderAPEXBASETol_Outside" VerticalAlignment="Top" IsSnapToTickEnabled="True" LargeChange="5" Maximum="50" SmallChange="1" TickPlacement="None" VerticalContentAlignment="Center" Minimum="0" ValueChanged="sliderAPEXBASETol_Outside_ValueChanged" />
+                <Label Content="{Binding Path=Value, ElementName=sliderAPEXBASETol_Outside}" Height="25" HorizontalAlignment="right" Margin="0,245,5,0" Name="labelAPEXBASETol_OutsideValue" VerticalAlignment="Top" Width="40" VerticalContentAlignment="Center"  />
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

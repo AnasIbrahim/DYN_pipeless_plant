@@ -1,0 +1,51 @@
+(*
+T: FUNCTION_BLOCK IP_URCV
+FW: YES	NO_VARIANT IP_URCV SKIP_NOTHING
+CI#: 48
+QSL: 0
+QVE: 7
+QPar: 7
+QFBI: 0
+*)
+
+EN_R	1	VAR_INPUT	@TYP:1
+		     
+
+;
+
+
+NDR	2	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+ID	3	VAR_INPUT	@TYP:3
+		     
+
+;
+
+
+ERROR	4	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+R_ID	5	VAR_INPUT	@TYP:16
+		     
+
+;
+
+
+STATUS	6	VAR_OUTPUT	@TYP:3
+		     
+
+;
+
+
+RD_1	7	VAR_IN_OUT	@TYP:24
+		     
+
+;
+

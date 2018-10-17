@@ -1,0 +1,100 @@
+(*
+T: FUNCTION_BLOCK Select_Position_Mix_Vert
+FW: NO
+CI#: 60
+QSL: 15
+QVE: 15
+QVPC: 15
+QPar: 11
+QFBI: 0
+*)
+@V 1 6 0
+MPosUp	1	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 7 0
+MPosDown	2	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 8 0
+MPos6	3	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 9 0
+MPos5	4	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 10 0
+MPos4	5	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 11 0
+MPos3	6	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 12 0
+MPos2	7	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 13 0
+MPos1	8	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 18 0
+Q_0_2_0_0	9	VAR_EXTERNAL	@TYP:1
+@RV 109		     
+
+;
+
+@V 1 19 0
+Q_0_2_0_2	10	VAR_EXTERNAL	@TYP:1
+@RV 111		     
+
+;
+
+@V 1 20 0
+Q_0_2_0_1	11	VAR_EXTERNAL	@TYP:1
+@RV 110		     
+
+;
+
+@V 1 21 0
+Q_0_2_0_3	12	VAR_EXTERNAL	@TYP:1
+@RV 119		     
+
+;
+
+@V 1 26 0
+MStop	13	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 27 0
+MPosRelRobot	14	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 28 0
+MRef	15	VAR_INPUT	@TYP:1
+		     
+
+;
+

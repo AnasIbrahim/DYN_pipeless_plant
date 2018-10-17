@@ -1,0 +1,66 @@
+# TAOpt4.3.0 (18.06.2013 11:01:06) by S. Panek <sebastian.panek@udo.edu> and C. Schoppmeyer <christian.schoppmeyer@bci.tu-dortmund.de> , BCI, TU Dortmund University,
+# Starting optimization of model Test at 18.06.2013 11:01:06
+
+==============================
+======= G E N E R A L ========
+==============================
+Termination                 = resource limit
+Number of solutions         = 7
+Waiting list capacity       = 64
+Average number of successors= 1.00363553737787
+==============================
+=== P E R F O R M A N C E ====
+==============================
+Total time                  = 2.0001099
+Number of created nodes     = 14483
+Number of visited nodes     = 8802
+Number of waiting nodes     = 33
+Average time/created node   = 0.0001381005
+Initial lower bound value   = 2631
+==============================
+== B E S T  S O L U T I O N ==
+==============================
+Best solution               = 4152
+Path length                 = 222
+Operations in best schedule = 111
+Max equal keys in passed    = 3
+Avg equal keys in passed    = 1.288288
+==============================
+==== R E D U C T I O N S =====
+==============================
+Upper bound cuts            = 0
+Lower bound cuts            = 242
+Nodes rejected by passed    = 202
+Total nodes filtered        = 5211
+  SSM - AA filtered         = 1174
+  SSM - FF filtered         = 177
+  SSM - FA filtered         = 237
+  SNL filtered              = 3623
+  WNL filtered              = 0
+  ERD filtered              = 0
+  EDD filtered              = 0
+  Equal recipe filtered     = 0
+  Alternative res. filtered = 0
+  No overtaking filtered    = 0
+  NIS - AA filtered         = 0
+  NIS - AFFA filtered       = 0
+  NIS - FF filtered         = 0
+  Skipped non-urgent        = 0
+==============================
+======= T A  M O D E L =======
+==============================
+Number of automata          = 18
+Total number of locations   = 603
+Total number of transitions = 929
+Number of integer variables = 0
+Number of float variables   = 7
+Number of clocks            = 19
+==============================
+======= L P  M O D E L =======
+==============================
+Initial lower bound         = 0
+Number of LP solver calls   = 0
+Skipped LP solver calls     = 0
+Number of LP iterations     = 0
+Number of LP variables      = 0
+Number of LP equations      = 0

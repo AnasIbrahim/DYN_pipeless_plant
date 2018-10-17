@@ -1,0 +1,63 @@
+2008-08-01; 12:11:40; IBSAssistantUpgradeServer2: Upgrade from version -1 to 1
+2008-08-01; 12:11:40; IBSAssistantUpgradeServer2 completed
+2008-08-01; 12:11:40; MultiCEUpgradeServer: Upgrade from version -1 to 1
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+2008-08-01; 12:11:40; MultiCEUpgradeServer completed
+2008-08-01; 12:11:40; ProjectInfoUpgradeServer: Upgrade from version -1 to 1
+2008-08-01; 12:11:40; ProjectInfoUpgradeServer completed
+2008-08-01; 12:11:40; IPPNIOAssistantUpgradeServer: Upgrade from version -1 to 5
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 1 to 2
+IPPNIOAssistantUpgradeServer::Upgrade from 2 to 3
+IPPNIOAssistantUpgradeServer::Upgrade from 3 to 4
+IPPNIOAssistantUpgradeServer::Upgrade from 4 to 5
+2008-08-01; 12:11:40; IPPNIOAssistantUpgradeServer completed
+2008-08-01; 12:11:40; IBSAssistantUpgradeServer: Upgrade from version -1 to 9
+2008-08-01; 12:11:40; IBSAssistantUpgradeServer completed
+2008-12-01; 09:48:21; IPPNIOAssistantUpgradeServer: Upgrade from version 5 to 6
+2008-12-01; 09:48:21; IPPNIOAssistantUpgradeServer completed
+2009-04-17; 07:03:49; IBSAssistantUpgradeServer2: Upgrade from version -1 to 1
+2009-04-17; 07:03:49; IBSAssistantUpgradeServer2 completed
+2009-04-17; 07:03:49; MultiCEUpgradeServer: Upgrade from version -1 to 1
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+2009-04-17; 07:03:49; MultiCEUpgradeServer completed
+2009-04-17; 07:03:49; ProjectInfoUpgradeServer: Upgrade from version -1 to 1
+2009-04-17; 07:03:49; ProjectInfoUpgradeServer completed
+2009-04-17; 07:03:49; IPPNIOAssistantUpgradeServer: Upgrade from version -1 to 6
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 1 to 2
+IPPNIOAssistantUpgradeServer::Upgrade from 2 to 3
+IPPNIOAssistantUpgradeServer::Upgrade from 3 to 4
+IPPNIOAssistantUpgradeServer::Upgrade from 4 to 5
+2009-04-17; 07:03:49; IPPNIOAssistantUpgradeServer completed
+2009-04-17; 07:03:49; IBSAssistantUpgradeServer: Upgrade from version -1 to 9
+2009-04-17; 07:03:49; IBSAssistantUpgradeServer completed
+2012-04-27; 13:19:49; IBSAssistantUpgradeServer2: Upgrade from version -1 to 1
+2012-04-27; 13:19:49; IBSAssistantUpgradeServer2 completed
+2012-04-27; 13:19:49; MultiCEUpgradeServer: Upgrade from version -1 to 1
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+MultiCEUpgrade: Searching for Masters and their new Multi CE device files
+MultiCEUpgrade: All devices found.
+2012-04-27; 13:19:49; MultiCEUpgradeServer completed
+2012-04-27; 13:19:49; ProjectInfoUpgradeServer: Upgrade from version -1 to 1
+2012-04-27; 13:19:49; ProjectInfoUpgradeServer completed
+2012-04-27; 13:19:49; IPPNIOAssistantUpgradeServer: Upgrade from version -1 to 7
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 0 to 1
+IPPNIOAssistantUpgradeServer::Upgrade from 1 to 2
+IPPNIOAssistantUpgradeServer::Upgrade from 2 to 3
+IPPNIOAssistantUpgradeServer::Upgrade from 3 to 4
+IPPNIOAssistantUpgradeServer::Upgrade from 4 to 5
+IPPNIOAssistantUpgradeServer::Upgrade from 6 to 7
+2012-04-27; 13:19:49; IPPNIOAssistantUpgradeServer completed
+2012-04-27; 13:19:49; IBSAssistantUpgradeServer: Upgrade from version -1 to 9
+2012-04-27; 13:19:49; IBSAssistantUpgradeServer completed

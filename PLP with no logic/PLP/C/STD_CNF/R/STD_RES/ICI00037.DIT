@@ -1,0 +1,76 @@
+(*
+T: FUNCTION_BLOCK OpenValve
+FW: NO
+CI#: 37
+QSL: 11
+QVE: 11
+QVPC: 11
+QPar: 6
+QFBI: 5
+*)
+@V 1 6 0
+OpenFor	1	VAR_INPUT	@TYP:12
+		     
+@TYP:12# 2S0
+;
+
+@V 1 11 0
+TP_1	2	VAR	@FB:45
+		     
+
+;
+
+@V 1 12 0
+F_TRIG_1	3	VAR	@FB:53
+		     
+
+;
+
+@V 1 17 0
+ValveClosed	4	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 18 0
+ToValve	5	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 23 0
+OpenValve	6	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 24 0
+CloseValve	7	VAR_INPUT	@TYP:1
+		     
+
+;
+
+@V 1 29 0
+RS_2	8	VAR	@FB:46
+		     
+
+;
+
+@V 1 30 0
+TP_2	9	VAR	@FB:45
+		     
+
+;
+
+@V 1 35 0
+ToLed	10	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+@V 1 40 0
+SR_2	11	VAR	@FB:47
+		     
+
+;
+

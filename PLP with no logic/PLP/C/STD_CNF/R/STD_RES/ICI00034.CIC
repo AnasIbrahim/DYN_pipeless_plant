@@ -1,0 +1,18 @@
+(*
+T: FUNCTION MAX
+FW: YES
+CI#: 34
+QSL: 0
+QJM: 1
+QJ: 1
+QR: 1
+*)
+		LD	@FUV 1
+		GE	@FUV 2
+		JMPCN	@LBL 1
+		LD	@FUV 1
+		ST	@FUV 3
+		RET	
+	@LBL 1		
+		LD	@FUV 2
+		ST	@FUV 3

@@ -1,0 +1,220 @@
+﻿<Window x:Class="MULTIFORM_PCS.GUI.RecipeConfiguration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600" Width="600" Height="400" ResizeMode="NoResize" Topmost="False" Title="DYN - PCS - RecipeConfiguration">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5,1" >
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="Silver" Offset="0.4"/>
+            <GradientStop Color="Silver" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Resources>
+        <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5,1" x:Key="LGBGray">
+            <GradientStop Color="Silver" Offset="0"/>
+            <GradientStop Color="Silver" Offset="0.4"/>
+            <GradientStop Color="Gray" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBYellow">
+            <GradientStop Color="Yellow" Offset="0"/>
+            <GradientStop Color="Yellow" Offset="0.4"/>
+            <GradientStop Color="Gold" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBRed">
+            <GradientStop Color="Red" Offset="0"/>
+            <GradientStop Color="Red" Offset="0.4"/>
+            <GradientStop Color="DarkRed" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBBlack">
+            <GradientStop Color="#FF333333" Offset="0"/>
+            <GradientStop Color="#FF333333" Offset="0.4"/>
+            <GradientStop Color="Black" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBPurple">
+            <GradientStop Color="DarkViolet" Offset="0"/>
+            <GradientStop Color="DarkViolet" Offset="0.4"/>
+            <GradientStop Color="Purple" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBOrange">
+            <GradientStop Color="Orange" Offset="0"/>
+            <GradientStop Color="Orange" Offset="0.4"/>
+            <GradientStop Color="OrangeRed" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBBlue">
+            <GradientStop Color="RoyalBlue" Offset="0"/>
+            <GradientStop Color="RoyalBlue" Offset="0.4"/>
+            <GradientStop Color="Blue" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush StartPoint="0, 0.5" EndPoint="1,0.5" x:Key="LGBGreen">
+            <GradientStop Color="LimeGreen" Offset="0"/>
+            <GradientStop Color="LimeGreen" Offset="0.4"/>
+            <GradientStop Color="Green" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="85"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="38"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="38"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Background="{StaticResource LGBGray}" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="2" Content="Done" HorizontalAlignment="Stretch" Margin="25,5,5,5" Name="button1" VerticalAlignment="Stretch" Click="button1_Click" />
+        <Label Grid.Row="0" Grid.ColumnSpan="8" Content="Configure the different recipes:" Height="28" HorizontalAlignment="Left" Margin="5,5,5,5" Name="label2" VerticalAlignment="Center" />
+        <Border BorderBrush="Black" Grid.Row="1" Grid.Column="1" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe1" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe1_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R1T" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+                <Rectangle Name="R1M" Grid.Row="1" VerticalAlignment="Stretch" Fill="{StaticResource LGBRed}"></Rectangle>
+                <Rectangle Name="R1B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe2" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe2_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R2T" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+                <Rectangle Name="R2M" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+                <Rectangle Name="R2B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="3" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe3" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe3_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R3T" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlue}"></Rectangle>
+                <Rectangle Name="R3M" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+                <Rectangle Name="R3B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="4" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe4" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe4_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R4T" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+                <Rectangle Name="R4M" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+                <Rectangle Name="R4B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="5" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe5" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe5_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R5T" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBPurple}"></Rectangle>
+                <Rectangle Name="R5M" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+                <Rectangle Name="R5B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="6" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Margin="5,5,5,5" Name="borderRecipe6" VerticalAlignment="Stretch" MouseLeftButtonDown="borderRecipe6_MouseLeftButtonDown" Opacity="0.6">
+            <Grid Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Rectangle Name="R6T" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+                <Rectangle Name="R6M" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+                <Rectangle Name="R6B" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+            </Grid>
+        </Border>
+        <Label VerticalContentAlignment="Center" Grid.Row="3" Content="Top layer:"></Label>
+        <Label VerticalContentAlignment="Center" Grid.Row="4" Content="Middle layer:"></Label>
+        <Label VerticalContentAlignment="Center" Grid.Row="5" Content="Bottom layer:"></Label>
+        <Border BorderThickness="2" Name="borderTopYellow" Grid.Row="3" Grid.Column="1"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopYellow_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopBlack"  Grid.Row="3" Grid.Column="2"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopBlack_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopRed"  Grid.Row="3" Grid.Column="3"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopRed_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBRed}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopBlue" Grid.Row="3" Grid.Column="4"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopBlue_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlue}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopPurple" Grid.Row="3" Grid.Column="5"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopPurple_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBPurple}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopOrange" Grid.Row="3" Grid.Column="6"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopOrange_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderTopGreen" Grid.Row="3" Grid.Column="7"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderTopGreen_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleYellow" Grid.Row="4" Grid.Column="1"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleYellow_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleBlack"  Grid.Row="4" Grid.Column="2"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleBlack_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleRed"  Grid.Row="4" Grid.Column="3"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleRed_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBRed}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleBlue" Grid.Row="4" Grid.Column="4"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleBlue_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlue}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddlePurple" Grid.Row="4" Grid.Column="5"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddlePurple_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBPurple}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleOrange" Grid.Row="4" Grid.Column="6"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleOrange_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderMiddleGreen" Grid.Row="4" Grid.Column="7"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderMiddleGreen_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomYellow" Grid.Row="5" Grid.Column="1"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomYellow_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBYellow}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomBlack"  Grid.Row="5" Grid.Column="2"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomBlack_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlack}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomRed"  Grid.Row="5" Grid.Column="3"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomRed_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBRed}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomBlue" Grid.Row="5" Grid.Column="4"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomBlue_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBBlue}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomPurple" Grid.Row="5" Grid.Column="5"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomPurple_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBPurple}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomOrange" Grid.Row="5" Grid.Column="6"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomOrange_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBOrange}"></Rectangle>
+        </Border>
+        <Border BorderThickness="2" Name="borderBottomGreen" Grid.Row="5" Grid.Column="7"  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" MouseLeftButtonDown="borderBottomGreen_MouseLeftButtonDown" Opacity="0.6">
+            <Rectangle  Margin="2,2,2,2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="{StaticResource LGBGreen}"></Rectangle>
+        </Border>
+    </Grid>
+</Window>

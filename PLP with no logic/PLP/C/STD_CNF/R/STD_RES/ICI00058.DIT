@@ -1,0 +1,75 @@
+(*
+T: FUNCTION_BLOCK TON
+FW: YES	NO_VARIANT TON SKIP_NOTHING	
+CI#: 58
+QSL: 0
+QVE: 11
+QPar: 4
+QFBI: 0
+*)
+
+IN	1	VAR_INPUT	@TYP:1	
+	
+
+;
+
+
+PT	2	VAR_INPUT	@TYP:12	
+	
+
+;
+
+
+ET	3	VAR_OUTPUT	@TYP:12	
+	
+
+;
+
+
+Q	4	VAR_OUTPUT	@TYP:1	
+	
+
+;
+
+
+Abgelaufen	5	VAR	@TYP:1	
+	
+
+;
+
+
+Init	6	VAR	@TYP:1	
+	
+
+;
+
+
+Last_In	7	VAR	@TYP:1	
+	
+
+;
+
+
+PARA_ET	8	VAR	@TYP:12	
+	
+
+;
+
+
+PARA_Q	9	VAR	@TYP:17	
+	
+
+;
+
+
+PARA_T0	10	VAR	@TYP:12	
+	
+
+;
+
+
+PARV_INIT	11	VAR	@TYP:17	
+	
+
+;
+
