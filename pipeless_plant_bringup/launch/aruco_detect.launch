@@ -1,5 +1,8 @@
 <!-- Run the aruco_detect node -->
 <launch>
+
+  <include file="$(find fiducial_slam)/launch/fiducial_slam.launch" /> <!--TODO include the node itself with the params here-->
+
   <!-- namespace for camera input -->
   <arg name="camera" default="/camera"/>
   <arg name="image" default="image_raw"/>

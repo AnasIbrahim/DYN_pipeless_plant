@@ -67,5 +67,7 @@
     <remap from="image_color" to="/$(arg camera_name)/image_color" />
   </node>
 
-  <node pkg="image_proc" type="image_proc" name="image_proc"/>
+  <group ns="camera">
+    <node pkg="image_proc" type="image_proc" name="image_proc"/>
+  </group>
 </launch>
