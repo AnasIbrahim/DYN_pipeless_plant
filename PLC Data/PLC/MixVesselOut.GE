@@ -1,0 +1,108 @@
+(*@PROPERTIES_EX@
+TYPE: POU
+LOCALE: 0
+IEC_LANGUAGE: FBD
+PLC_TYPE: independent
+PROC_TYPE: independent
+*)
+(*@KEY@:DESCRIPTION*)
+
+(*@KEY@:END_DESCRIPTION*)
+FUNCTION_BLOCK MixVesselOut
+
+(*Group:Default*)
+
+
+VAR_OUTPUT
+	Idle :	BOOL {};
+	MixVertStartAut :	BOOL {};
+	MixVertRelRobotAut :	BOOL {};
+	Magnets12Aut :	BOOL {};
+	Magnets34Aut :	BOOL {};
+END_VAR
+
+
+VAR
+	GVM_OUT_1 :	GrapVesselMixOUT;
+END_VAR
+
+
+VAR_OUTPUT
+	MixPosDownAut :	BOOL {};
+	MixPosUpAut :	BOOL {};
+END_VAR
+
+
+VAR_EXTERNAL
+	MixVertRelRobot :	BOOL;
+	MixVertStart :	BOOL;
+END_VAR
+
+
+(*@KEY@: WORKSHEET
+NAME: MixVesselOut
+IEC_LANGUAGE: FBD
+*)
+[GRA]
+400 400 0 0 0 0 0 
+
+[LIT]
+4
+16 15 19 15 0 ""
+16 19 19 19 0 ""
+87 15 137 15 0 ""
+31 15 60 15 0 ""
+
+[TET]
+10
+0 14 16 16 4 5 MixVertRelRobot
+3 18 16 20 4 5 MixVertStart
+137 14 143 16 4 3 Idle
+87 18 103 20 4 3 MixPosDownAut
+87 22 103 24 4 3 MixVertStartAut
+87 26 106 28 4 3 MixVertRelRobotAut
+87 30 102 32 4 3 Magnets12Aut
+87 34 102 36 4 3 Magnets34Aut
+87 38 101 40 4 3 MixPosUpAut
+62 8 85 11 7 6 GVM_OUT_1
+
+[FBS]
+2
+196629 196619 29 23 1 0 AND @  
+327742 1114123 85 43 0 0 GrapVesselMixOUT GVM_OUT_1  
+
+[FPT]
+11
+21 14 23 16 IN1 2 0 0 0 1665 0 @ ANY_BIT 
+21 18 23 20 IN2 2 0 0 0 1665 0 @ ANY_BIT 
+28 14 29 16 OUT 0 0 0 1 0 641 @ ANY_BIT 
+81 14 85 16 Idle 0 0 0 1 0 4225 @ BOOL 
+62 14 68 16 Start 0 0 0 0 4225 0 @ BOOL 
+74 18 85 20 MixPos1Aut 0 0 0 1 0 4225 @ BOOL 
+71 22 85 24 MixVertStartAut 0 0 0 1 0 4225 @ BOOL 
+68 26 85 28 MixVertRelRobotAut 0 0 0 1 0 4225 @ BOOL 
+72 30 85 32 Magnets12Aut 0 0 0 1 0 4225 @ BOOL 
+72 34 85 36 Magnets34Aut 0 0 0 1 0 4225 @ BOOL 
+74 38 85 40 MixPos2Aut 0 0 0 1 0 4225 @ BOOL 
+
+[AKT]
+0
+
+[STT]
+0
+
+[TRT]
+0
+
+[KOT]
+0
+
+[VER]
+0
+
+[IBX]
+0
+
+
+(*@KEY@: END_WORKSHEET *)
+END_FUNCTION_BLOCK

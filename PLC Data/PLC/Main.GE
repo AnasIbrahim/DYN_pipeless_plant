@@ -1,0 +1,174 @@
+(*@PROPERTIES_EX@
+TYPE: POU
+LOCALE: 0
+IEC_LANGUAGE: FBD
+PLC_TYPE: independent
+PROC_TYPE: independent
+*)
+(*@KEY@:DESCRIPTION*)
+
+(*@KEY@:END_DESCRIPTION*)
+PROGRAM Main
+
+(*Group:Default*)
+
+
+VAR
+	OpenValve1 :	OpenValve;
+	OpenValve2 :	OpenValve;
+	OpenValve3 :	OpenValve;
+	OpenValve4 :	OpenValve;
+END_VAR
+
+
+VAR_EXTERNAL
+	Q_0_1_1_0 :	BOOL;(*Ventil 1*)
+	Q_0_1_1_4 :	BOOL;(*Ventil 2*)
+	Q_0_1_1_2 :	BOOL;(*Ventil 3*)
+	Q_0_1_1_5 :	BOOL;(*Ventil 4*)
+	V1_OpenFor :	TIME;
+	V1_Open :	BOOL;
+	V2_OpenFor :	TIME;
+	V2_Open :	BOOL;
+	Close_Valves :	BOOL;
+	V3_OpenFor :	TIME;
+	V3_Open :	BOOL;
+	V4_OpenFor :	TIME;
+	V4_Open :	BOOL;
+	V1_Closed :	BOOL;
+	V2_Closed :	BOOL;
+	V3_Closed :	BOOL;
+	V4_Closed :	BOOL;
+END_VAR
+
+
+VAR
+	Connect_1 :	Connect;
+	ConvertBytes_Valves_1 :	ConvertBytes_Valves;
+	ConvertBytes_Storage_1 :	ConvertBytes_Storage;
+	Mixing_Dosing_2 :	Mixing_Dosing;
+	ConvertBytes_Mix_1 :	ConvertBytes_Mix;
+	Move_Storage_Vert_1 :	Move_Storage_Vert;
+	Move_Mix_Vert_1 :	Move_Mix_Vert;
+	Move_Storage_Hor_1 :	Move_Storage_Hor;
+END_VAR
+
+
+VAR_EXTERNAL
+	Q_0_1_1_1 :	BOOL;(*Ventil 5 (LED1)*)
+	Q_0_1_1_6 :	BOOL;(*Ventil 6 (LED2)*)
+	Q_0_1_1_3 :	BOOL;(*Ventil 7 (LED3)*)
+	Q_0_1_1_7 :	BOOL;(*Ventil 8 (LED4)*)
+END_VAR
+
+
+(*@KEY@: WORKSHEET
+NAME: Main
+IEC_LANGUAGE: FBD
+*)
+[GRA]
+400 400 0 0 0 0 0 
+
+[LIT]
+0
+
+[TET]
+35
+56 36 69 38 4 5 V1_OpenFor
+58 40 69 42 4 5 V1_Open
+55 44 69 46 4 5 Close_Valves
+56 57 69 59 4 5 V2_OpenFor
+58 61 69 63 4 5 V2_Open
+55 65 69 67 4 5 Close_Valves
+56 78 69 80 4 5 V3_OpenFor
+58 82 69 84 4 5 V3_Open
+55 86 69 88 4 5 Close_Valves
+56 99 69 101 4 5 V4_OpenFor
+58 103 69 105 4 5 V4_Open
+55 107 69 109 4 5 Close_Valves
+95 36 106 38 4 3 V1_Closed
+95 57 106 59 4 3 V2_Closed
+95 78 106 80 4 3 V3_Closed
+95 99 106 101 4 3 V4_Closed
+95 40 107 42 4 3 Q_0_1_1_0
+95 61 107 63 4 3 Q_0_1_1_4
+95 82 107 84 4 3 Q_0_1_1_2
+95 103 107 105 4 3 Q_0_1_1_5
+95 44 107 46 4 3 Q_0_1_1_1
+95 65 107 67 4 3 Q_0_1_1_6
+95 86 107 88 4 3 Q_0_1_1_3
+95 107 107 109 4 3 Q_0_1_1_7
+71 51 93 54 7 6 OpenValve2
+71 72 93 75 7 6 OpenValve3
+71 93 93 96 7 6 OpenValve4
+71 30 93 33 7 6 OpenValve1
+131 56 151 59 7 6 ConvertBytes_Valves_1
+157 11 167 14 7 6 Connect_1
+130 64 148 67 7 6 ConvertBytes_Mix_1
+131 72 153 75 7 6 ConvertBytes_Storage_1
+155 72 175 75 7 6 Move_Storage_Hor_1
+155 80 175 83 7 6 Move_Storage_Vert_1
+132 99 148 102 7 6 Move_Mix_Vert_1
+
+[FBS]
+11
+655431 720950 93 70 0 0 OpenValve OpenValve2  
+655431 720971 93 91 0 0 OpenValve OpenValve3  
+655431 720992 93 112 0 0 OpenValve OpenValve4  
+655431 720929 93 49 0 0 OpenValve OpenValve1  
+196739 196667 150 63 0 0 ConvertBytes_Valves ConvertBytes_Valves_1  
+196766 196622 166 18 0 0 Connect Connect_1  
+196739 196675 147 71 0 0 ConvertBytes_Mix ConvertBytes_Mix_1  
+196740 196683 152 79 0 0 ConvertBytes_Storage ConvertBytes_Storage_1  
+196764 196683 173 79 0 0 Move_Storage_Hor Move_Storage_Hor_1  
+196764 196691 173 94 0 0 Move_Storage_Vert Move_Storage_Vert_1  
+196741 196710 147 106 0 0 Move_Mix_Vert Move_Mix_Vert_1  
+
+[FPT]
+24
+71 57 80 59 OpenFor 0 0 0 0 4224 0 @ TIME 
+82 57 93 59 ValveClosed 0 0 0 1 0 4225 @ BOOL 
+85 61 93 63 ToValve 0 0 0 1 0 4225 @ BOOL 
+71 61 82 63 OpenValve 0 0 0 0 4225 0 @ BOOL 
+71 65 82 67 CloseValve 0 0 0 0 4225 0 @ BOOL 
+87 65 93 67 ToLed 0 0 0 1 0 4225 @ BOOL 
+71 78 80 80 OpenFor 0 0 0 0 4224 0 @ TIME 
+82 78 93 80 ValveClosed 0 0 0 1 0 4225 @ BOOL 
+85 82 93 84 ToValve 0 0 0 1 0 4225 @ BOOL 
+71 82 82 84 OpenValve 0 0 0 0 4225 0 @ BOOL 
+71 86 82 88 CloseValve 0 0 0 0 4225 0 @ BOOL 
+87 86 93 88 ToLed 0 0 0 1 0 4225 @ BOOL 
+71 99 80 101 OpenFor 0 0 0 0 4224 0 @ TIME 
+82 99 93 101 ValveClosed 0 0 0 1 0 4225 @ BOOL 
+85 103 93 105 ToValve 0 0 0 1 0 4225 @ BOOL 
+71 103 82 105 OpenValve 0 0 0 0 4225 0 @ BOOL 
+71 107 82 109 CloseValve 0 0 0 0 4225 0 @ BOOL 
+87 107 93 109 ToLed 0 0 0 1 0 4225 @ BOOL 
+71 36 80 38 OpenFor 0 0 0 0 4224 0 @ TIME 
+82 36 93 38 ValveClosed 0 0 0 1 0 4225 @ BOOL 
+85 40 93 42 ToValve 0 0 0 1 0 4225 @ BOOL 
+71 40 82 42 OpenValve 0 0 0 0 4225 0 @ BOOL 
+71 44 82 46 CloseValve 0 0 0 0 4225 0 @ BOOL 
+87 44 93 46 ToLed 0 0 0 1 0 4225 @ BOOL 
+
+[AKT]
+0
+
+[STT]
+0
+
+[TRT]
+0
+
+[KOT]
+0
+
+[VER]
+0
+
+[IBX]
+0
+
+
+(*@KEY@: END_WORKSHEET *)
+END_PROGRAM
