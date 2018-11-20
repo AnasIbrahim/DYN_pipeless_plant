@@ -1,3 +1,3 @@
 <launch>
-  <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="-0.155, -0.072, 2.333  0.747, 0.664, 0.025, 0.010 map camera 10" />
+  <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0.235 0.119 2.325   0.740 0.670 -0.062 -0.012 map camera 10" />
 </launch>
