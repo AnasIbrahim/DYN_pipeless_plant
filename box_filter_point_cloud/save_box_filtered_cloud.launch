@@ -1,0 +1,18 @@
+<launch>
+  
+  <!-- Write point clouds to file -->
+  <node pkg="point_cloud_io" type="write" name="write" output="screen">
+    <param name="topic"                  value="/pcl_filters/psz/output" />
+    <param name="folder_path"            value="$(find pipeless_plant_gui)/point_cloud" />
+    <param name="file_prefix"            value="box_filtered_cloud" />
+    <param name="file_ending"            value="ply" />
+    <param name="add_counter_to_path"    value="false" />
+    <param name="add_frame_id_to_path"   value="false" />
+    <param name="add_stamp_sec_to_path"  value="false" />
+    <param name="add_stamp_nsec_to_path" value="false" />
+  </node>
+    
+  <!-- Visualize the point cloud in rviz -->
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find point_cloud_io)/examples/point_cloud_io.rviz" /-->
+    
+</launch>

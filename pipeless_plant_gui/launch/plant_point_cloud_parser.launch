@@ -1,0 +1,16 @@
+<launch>
+  
+  <!-- Publish point cloud from file -->
+  <node pkg="point_cloud_io" type="read" name="read" output="screen">
+    <param name="file_path" value="$(find pipeless_plant_gui)/point_cloud/cloud.ply" />
+    <param name="topic"     value="/point_cloud" />
+    <param name="frame"     value="plant_static_cloud" />
+    <param name="rate"      value="1.0" />
+  </node>
+
+  <node pkg="tf" type="static_transform_publisher" name="map_to_plant_static_cloud_pub" args="0 0 0.054 0 0 0 map plant_static_cloud 10" />
+    
+  <!-- Visualize the point cloud in rviz -->
+  <!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find point_cloud_io)/examples/point_cloud_io.rviz" /-->
+    
+</launch>
