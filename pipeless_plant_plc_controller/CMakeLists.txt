@@ -56,6 +56,10 @@ catkin_python_setup()
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
+  colours.srv
+  mixer.srv
+  storage_hor.srv
+  storage_ver.srv
   Mixer.srv
   Storage.srv
   Filling.srv

@@ -1,0 +1,10 @@
+bool StrgPosDown
+bool StrgPosUp
+bool StrgPosCent
+bool StrgVertStart
+bool StrgVertStop
+bool StrgVertRef
+bool StrgVertRelPlate
+bool StrgVertRelRobot
+---
+string status

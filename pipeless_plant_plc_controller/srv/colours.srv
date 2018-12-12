@@ -1,0 +1,11 @@
+bool v1_open
+uint8 v1_time
+bool v2_open
+uint8 v2_time
+bool v3_open
+uint8 v3_time
+bool v4_open
+uint8 v4_time
+bool close_all
+---
+string status

@@ -1,0 +1,20 @@
+bool MixStart
+unint8 MixFor
+unint8 DoseSpeedB1
+unint8 DoseSpeedB0
+unint8 DoseFor
+bool DoseStart
+bool MixPosDown
+bool MixPos2
+bool MixPos1
+bool MixPosUp
+bool MixPos3
+bool MixPos4
+bool MixPos5
+bool MixPos6
+bool MixVertStart
+bool MixVertStop
+bool MixVertRef
+bool MixVertRelRobot
+---
+string status
