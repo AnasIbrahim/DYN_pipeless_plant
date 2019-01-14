@@ -1,8 +1,8 @@
 bool MixStart
-unint8 MixFor
-unint8 DoseSpeedB1
-unint8 DoseSpeedB0
-unint8 DoseFor
+uint8 MixFor
+uint8 DoseSpeedB1
+uint8 DoseSpeedB0
+uint8 DoseFor
 bool DoseStart
 bool MixPosDown
 bool MixPos2
