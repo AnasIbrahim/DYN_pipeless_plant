@@ -10,6 +10,7 @@ project(pipeless_plant_bringup)
 find_package(catkin REQUIRED COMPONENTS
   ueye_cam
   aruco_detect
+  robot_localization
 )
 
 ## System dependencies are found with CMake's conventions
@@ -104,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pipeless_plant_bringup
-#  CATKIN_DEPENDS ueye_cam
+  CATKIN_DEPENDS ueye_cam aruco_detect robot_localization
 #  DEPENDS system_lib
 )
 
