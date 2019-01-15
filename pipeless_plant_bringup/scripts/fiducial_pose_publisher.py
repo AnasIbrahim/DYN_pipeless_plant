@@ -16,7 +16,7 @@ def callback(newPose):
         return
 
     pose = geometry_msgs.msg.PoseWithCovarianceStamped()
-    pose.header.stamp = rospy.Time(0)
+    pose.header.stamp = rospy.Time.now()
     pose.header.frame_id = 'map'
     pose.pose.pose.position.x = trans[0]
     pose.pose.pose.position.y = trans[1]
@@ -26,12 +26,12 @@ def callback(newPose):
     pose.pose.pose.orientation.z = rot[2]
     pose.pose.pose.orientation.w = rot[3]
 
-    pose.pose.covariance = [0, 0, 0, 0, 0, 0, 
-                  0, 0, 0, 0, 0, 0, 
-                  0, 0, 0, 0, 0, 0, 
-                  0, 0, 0, 0, 0, 0, 
-                  0, 0, 0, 0, 0, 0, 
-                  0, 0, 0, 0, 0, 0]
+    pose.pose.covariance = [0.1, 0, 0, 0, 0, 0, 
+                            0, 0.1, 0, 0, 0, 0, 
+                            0, 0, 0.1, 0, 0, 0, 
+                            0, 0, 0, 0.1, 0, 0, 
+                            0, 0, 0, 0, 0.1, 0, 
+                            0, 0, 0, 0, 0, 0.1]
     
     publisher.publish(pose)
 

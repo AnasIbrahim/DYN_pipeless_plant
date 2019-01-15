@@ -1,5 +1,5 @@
 <launch>
   <include file="$(find pipeless_plant_bringup)/launch/camera.launch" />
   <include file="$(find pipeless_plant_bringup)/launch/fiducials_detection.launch" />
-  <include file="$(find pipeless_plant_bringup)/launch/tf_static_map_to_camera.launch" />
+  <include file="$(find pipeless_plant_bringup)/launch/tf_static_from_map.launch" />
 </launch>
