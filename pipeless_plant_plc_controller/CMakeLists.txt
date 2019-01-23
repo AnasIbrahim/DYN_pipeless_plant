@@ -56,13 +56,7 @@ catkin_python_setup()
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  colours.srv
-  mixer.srv
-  storage_hor.srv
-  storage_ver.srv
-  Mixer.srv
-  Storage.srv
-  Filling.srv
+  tcp_plc.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -73,10 +67,10 @@ add_service_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs  # Or other packages containing msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
