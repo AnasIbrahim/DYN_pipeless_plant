@@ -56,7 +56,9 @@ catkin_python_setup()
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  tcp_plc.srv
+  colour.srv
+  doser.srv
+  motor.srv
 )
 
 ## Generate actions in the 'action' folder
