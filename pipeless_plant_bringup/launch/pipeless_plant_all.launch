@@ -1,9 +1,13 @@
 <launch>
+
+  <!-- launch main drivers -->
   <include file="$(find pipeless_plant_bringup)/launch/camera.launch" />
-  <include file="$(find ceiling_cam_fiducials_odom_ekf)/launch/fiducials_detection.launch" />
-  <include file="$(find pipeless_plant_bringup)/launch/tf_static_from_map.launch" />
+  <!-- TODO: add PLC node -->
+
+  <!-- launching robot bases -->
+  <!-- TODO -->
 
   <!-- Localization related -->
-  <include file="$(find ceiling_cam_fiducials_odom_ekf)/launch/ekf_localization.launch" />
-  <node pkg="ceiling_cam_fiducials_odom_ekf" type="fiducial_pose_publisher.py" name="fiducial_tf_to_pose_msg_converter"/>
+  <include file="$(find ceiling_cam_fiducials_odom_ekf)/launch/ceiling_localization.launch" />
+
 </launch>
