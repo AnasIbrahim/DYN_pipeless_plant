@@ -1,0 +1,45 @@
+(*
+T: FUNCTION_BLOCK IP_CONNECT
+FW: YES	NO_VARIANT IP_CONNECT SKIP_NOTHING
+CI#: 48
+QSL: 0
+QVE: 6
+QPar: 6
+QFBI: 0
+*)
+
+EN_C	1	VAR_INPUT	@TYP:1
+		     
+
+;
+
+
+VALID	2	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+PARTNER	3	VAR_INPUT	@TYP:16
+		     
+
+;
+
+
+ERROR	4	VAR_OUTPUT	@TYP:1
+		     
+
+;
+
+
+STATUS	5	VAR_OUTPUT	@TYP:3
+		     
+
+;
+
+
+ID	6	VAR_OUTPUT	@TYP:3
+		     
+
+;
+

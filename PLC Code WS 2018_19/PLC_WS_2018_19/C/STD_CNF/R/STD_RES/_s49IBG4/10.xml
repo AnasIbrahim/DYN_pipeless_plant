@@ -1,0 +1,124 @@
+<WatchlistFile>
+  <Watchlist>
+    <Name><![CDATA[Prozessdaten von  # INTERBUS 0 . 0 ]]></Name>
+    <Displayed><![CDATA[True]]></Displayed>
+    <Selected><![CDATA[False]]></Selected>
+    <PDI>
+      <ID><![CDATA[io_0_0]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_2]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_3]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_4]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_5]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_6]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_7]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_8]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_9]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_10]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_11]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_12]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_13]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_14]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_15]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_0_16]]></ID>
+      <DeviceID><![CDATA[16]]></DeviceID>
+      <TerminalID><![CDATA[__]]></TerminalID>
+      <FormatName><![CDATA[LED1]]></FormatName>
+    </PDI>
+    <PDI>
+      <ID><![CDATA[io_2]]></ID>
+      <DeviceID><![CDATA[18]]></DeviceID>
+      <TerminalID><![CDATA[trm_1]]></TerminalID>
+      <FormatName><![CDATA[LED16]]></FormatName>
+    </PDI>
+  </Watchlist>
+  <Options>
+    <WindowPos x="424" y="113" height="796" width="1161" splitter="216" />
+    <Device><![CDATA[0]]></Device>
+    <Terminal><![CDATA[0]]></Terminal>
+    <PDI><![CDATA[0]]></PDI>
+    <Format BitLength="1"><![CDATA[LED1]]></Format>
+    <Format BitLength="2"><![CDATA[LED2]]></Format>
+    <Format BitLength="4"><![CDATA[LED4]]></Format>
+    <Format BitLength="8"><![CDATA[LED8]]></Format>
+    <Format BitLength="16"><![CDATA[LED16]]></Format>
+    <Format BitLength="32"><![CDATA[LED32]]></Format>
+    <Format BitLength="64"><![CDATA[LED64]]></Format>
+    <PollInterval><![CDATA[1]]></PollInterval>
+  </Options>
+  <PLCName><![CDATA[10]]></PLCName>
+</WatchlistFile>

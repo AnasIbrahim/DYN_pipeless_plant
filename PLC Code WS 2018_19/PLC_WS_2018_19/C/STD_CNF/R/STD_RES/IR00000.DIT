@@ -1,0 +1,1522 @@
+(*
+T: RESOURCE STD_RES
+FW: NO
+CI#: 0
+QSL: 252
+QVE: 252
+QVPC: 252
+QPar: 0
+QFBI: 0
+*)
+@V 2 7 0
+PLCMODE_ON	1	VAR_GLOBAL	@TYP:1
+%MX 1.2016.0		     
+
+;
+PFW: PDD
+@V 2 8 0
+PLCMODE_LOADING	2	VAR_GLOBAL	@TYP:1
+%MX 1.2017.0		     
+
+;
+
+@V 2 9 0
+PLCMODE_RUN	3	VAR_GLOBAL	@TYP:1
+%MX 1.7.0		     
+
+;
+
+@V 2 10 0
+PLCMODE_STOP	4	VAR_GLOBAL	@TYP:1
+%MX 1.6.0		     
+
+;
+
+@V 2 11 0
+PLCMODE_HALT	5	VAR_GLOBAL	@TYP:1
+%MX 1.8.0		     
+
+;
+
+@V 2 12 0
+PLCDEBUG_BPSET	6	VAR_GLOBAL	@TYP:1
+%MX 1.2019.0		     
+
+;
+
+@V 2 13 0
+PLCDEBUG_FORCE	7	VAR_GLOBAL	@TYP:1
+%MX 1.2018.0		     
+
+;
+
+@V 2 14 0
+PLCDEBUG_POWERFLOW	8	VAR_GLOBAL	@TYP:1
+%MX 1.2020.0		     
+
+;
+
+@V 2 15 0
+PLC_TICKS_PER_SEC	9	VAR_GLOBAL	@TYP:3
+%MW 1.2000		     
+
+;
+
+@V 2 16 0
+PLC_SYS_TICK_CNT	10	VAR_GLOBAL	@TYP:4
+%MD 1.0		     
+
+;
+
+@V 2 17 0
+PLC_TASK_AVAILABLE	11	VAR_GLOBAL	@TYP:3
+%MW 1.2012		     
+
+;
+
+@V 2 18 0
+PLC_SYSTASK_AVAILABLE	12	VAR_GLOBAL	@TYP:3
+%MW 1.2016		     
+
+;
+
+@V 2 19 0
+PLC_MAX_ERRORS	13	VAR_GLOBAL	@TYP:4
+%MD 1.2004		     
+
+;
+
+@V 2 20 0
+PLC_ERRORS	14	VAR_GLOBAL	@TYP:4
+%MD 1.2008		     
+
+;
+
+@V 2 21 0
+PLC_TASK_DEFINED	15	VAR_GLOBAL	@TYP:3
+%MW 1.4		     
+
+;
+
+@V 2 22 0
+PLC_TASK_1	16	VAR_GLOBAL	@TYP:1028
+%MB 1.5000		     
+
+;
+
+@V 2 23 0
+PLC_TASK_2	17	VAR_GLOBAL	@TYP:1028
+%MB 1.5128		     
+
+;
+
+@V 2 24 0
+PLC_TASK_3	18	VAR_GLOBAL	@TYP:1028
+%MB 1.5256		     
+
+;
+
+@V 2 25 0
+PLC_TASK_4	19	VAR_GLOBAL	@TYP:1028
+%MB 1.5384		     
+
+;
+
+@V 2 26 0
+PLC_TASK_5	20	VAR_GLOBAL	@TYP:1028
+%MB 1.5512		     
+
+;
+
+@V 2 27 0
+PLC_TASK_6	21	VAR_GLOBAL	@TYP:1028
+%MB 1.5640		     
+
+;
+
+@V 2 28 0
+PLC_TASK_7	22	VAR_GLOBAL	@TYP:1028
+%MB 1.5768		     
+
+;
+
+@V 2 29 0
+PLC_TASK_8	23	VAR_GLOBAL	@TYP:1028
+%MB 1.5896		     
+
+;
+
+@V 2 30 0
+LICENSE	24	VAR_GLOBAL	@TYP:19
+%MD 1.60112		     
+
+;
+
+@V 2 31 0
+MASTER_DIAG_STATUS_REG_HI	25	VAR_GLOBAL	@TYP:17
+%MB 1.60001		     
+
+;
+
+@V 2 32 0
+MASTER_DIAG_STATUS_REG_LOW	26	VAR_GLOBAL	@TYP:17
+%MB 1.60000		     
+
+;
+
+@V 2 33 0
+MASTER_DIAG_STATUS_REG_BSA	27	VAR_GLOBAL	@TYP:1
+%MX 1.60140.0		     
+
+;
+
+@V 2 34 0
+MASTER_DIAG_STATUS_REG_SYSFAIL	28	VAR_GLOBAL	@TYP:1
+%MX 1.60141.0		     
+
+;
+
+@V 2 35 0
+MASTER_DIAG_STATUS_REG_RES	29	VAR_GLOBAL	@TYP:1
+%MX 1.60142.0		     
+
+;
+
+@V 2 36 0
+MASTER_DIAG_STATUS_REG_SYNCRES	30	VAR_GLOBAL	@TYP:1
+%MX 1.60143.0		     
+
+;
+
+@V 2 37 0
+MASTER_DIAG_STATUS_REG_DCR	31	VAR_GLOBAL	@TYP:1
+%MX 1.60144.0		     
+
+;
+
+@V 2 38 0
+MASTER_DIAG_STATUS_REG_WARN	32	VAR_GLOBAL	@TYP:1
+%MX 1.60145.0		     
+
+;
+
+@V 2 39 0
+MASTER_DIAG_STATUS_REG_QUAL	33	VAR_GLOBAL	@TYP:1
+%MX 1.60146.0		     
+
+;
+
+@V 2 40 0
+MASTER_DIAG_STATUS_REG_SSINFO	34	VAR_GLOBAL	@TYP:1
+%MX 1.60147.0		     
+
+;
+
+@V 2 41 0
+MASTER_DIAG_STATUS_REG_USER	35	VAR_GLOBAL	@TYP:1
+%MX 1.60148.0		     
+
+;
+
+@V 2 42 0
+MASTER_DIAG_STATUS_REG_PF	36	VAR_GLOBAL	@TYP:1
+%MX 1.60149.0		     
+
+;
+
+@V 2 43 0
+MASTER_DIAG_STATUS_REG_BUS	37	VAR_GLOBAL	@TYP:1
+%MX 1.60150.0		     
+
+;
+
+@V 2 44 0
+MASTER_DIAG_STATUS_REG_CTRL	38	VAR_GLOBAL	@TYP:1
+%MX 1.60151.0		     
+
+;
+
+@V 2 45 0
+MASTER_DIAG_STATUS_REG_DTC	39	VAR_GLOBAL	@TYP:1
+%MX 1.60152.0		     
+
+;
+
+@V 2 46 0
+MASTER_DIAG_STATUS_REG_RUN	40	VAR_GLOBAL	@TYP:1
+%MX 1.60153.0		     
+
+;
+
+@V 2 47 0
+MASTER_DIAG_STATUS_REG_ACT	41	VAR_GLOBAL	@TYP:1
+%MX 1.60154.0		     
+
+;
+
+@V 2 48 0
+MASTER_DIAG_STATUS_REG_RDY	42	VAR_GLOBAL	@TYP:1
+%MX 1.60155.0		     
+
+;
+
+@V 2 49 0
+MASTER_DIAG_PARAM_REG_HI	43	VAR_GLOBAL	@TYP:17
+%MB 1.60003		     
+
+;
+
+@V 2 50 0
+MASTER_DIAG_PARAM_REG_LOW	44	VAR_GLOBAL	@TYP:17
+%MB 1.60002		     
+
+;
+
+@V 2 51 0
+MASTER_DIAG_PARAM_2_REG_HI	45	VAR_GLOBAL	@TYP:17
+%MB 1.60005		     
+
+;
+
+@V 2 52 0
+MASTER_DIAG_PARAM_2_REG_LOW	46	VAR_GLOBAL	@TYP:17
+%MB 1.60004		     
+
+;
+
+@V 2 53 0
+COP_DIAG_STATUS_REG_RT_ERR	47	VAR_GLOBAL	@TYP:1
+%MX 1.60156.0		     
+
+;
+
+@V 2 54 0
+COP_DIAG_STATUS_REG_FAT_ERR	48	VAR_GLOBAL	@TYP:1
+%MX 1.60157.0		     
+
+;
+
+@V 2 55 0
+COP_DIAG_STATUS_REG_WARN	49	VAR_GLOBAL	@TYP:1
+%MX 1.60158.0		     
+
+;
+
+@V 2 56 0
+COP_DIAG_STATUS_REG_PON	50	VAR_GLOBAL	@TYP:1
+%MX 1.60159.0		     
+
+;
+
+@V 2 57 0
+COP_DIAG_STATUS_REG_FC_RUN	51	VAR_GLOBAL	@TYP:1
+%MX 1.60160.0		     
+
+;
+
+@V 2 58 0
+COP_DIAG_STATUS_REG_FC_STOP	52	VAR_GLOBAL	@TYP:1
+%MX 1.60161.0		     
+
+;
+
+@V 2 59 0
+COP_DIAG_STATUS_REG_FC_HALT	53	VAR_GLOBAL	@TYP:1
+%MX 1.60162.0		     
+
+;
+
+@V 2 60 0
+COP_DIAG_STATUS_REG_FC_LDG	54	VAR_GLOBAL	@TYP:1
+%MX 1.60163.0		     
+
+;
+
+@V 2 61 0
+COP_DIAG_STATUS_REG_FC_DBG	55	VAR_GLOBAL	@TYP:1
+%MX 1.60164.0		     
+
+;
+
+@V 2 62 0
+COP_DIAG_STATUS_REG_FC_RDO	56	VAR_GLOBAL	@TYP:1
+%MX 1.60165.0		     
+
+;
+
+@V 2 63 0
+COP_DIAG_PARAM_REG	57	VAR_GLOBAL	@TYP:18
+%MW 1.60022		     
+
+;
+
+@V 2 64 0
+COP_DIAG_PARAM_2_REG	58	VAR_GLOBAL	@TYP:18
+%MW 1.60024		     
+
+;
+
+@V 2 65 0
+COP_CPU_LOAD_WARNING	59	VAR_GLOBAL	@TYP:1
+%MX 1.60182.0		     
+
+;
+
+@V 2 66 0
+ONBOARD_INPUT	60	VAR_GLOBAL	@TYP:18
+%MW 1.60040		     
+
+;
+
+@V 2 67 0
+ONBOARD_INPUT_BIT0	61	VAR_GLOBAL	@TYP:1
+%MX 1.60183.0		     
+
+;
+
+@V 2 68 0
+ONBOARD_INPUT_BIT1	62	VAR_GLOBAL	@TYP:1
+%MX 1.60184.0		     
+
+;
+
+@V 2 69 0
+ONBOARD_INPUT_BIT2	63	VAR_GLOBAL	@TYP:1
+%MX 1.60185.0		     
+
+;
+
+@V 2 70 0
+ONBOARD_INPUT_BIT3	64	VAR_GLOBAL	@TYP:1
+%MX 1.60186.0		     
+
+;
+
+@V 2 71 0
+ONBOARD_INPUT_BIT4	65	VAR_GLOBAL	@TYP:1
+%MX 1.60187.0		     
+
+;
+
+@V 2 72 0
+ONBOARD_INPUT_BIT5	66	VAR_GLOBAL	@TYP:1
+%MX 1.60188.0		     
+
+;
+
+@V 2 73 0
+ONBOARD_INPUT_BIT6	67	VAR_GLOBAL	@TYP:1
+%MX 1.60189.0		     
+
+;
+
+@V 2 74 0
+ONBOARD_INPUT_BIT7	68	VAR_GLOBAL	@TYP:1
+%MX 1.60190.0		     
+
+;
+
+@V 2 75 0
+ONBOARD_OUTPUT_BIT0	69	VAR_GLOBAL	@TYP:1
+%MX 3.61000.0		     
+
+;
+
+@V 2 76 0
+ONBOARD_OUTPUT_BIT1	70	VAR_GLOBAL	@TYP:1
+%MX 3.61001.0		     
+
+;
+
+@V 2 77 0
+ONBOARD_OUTPUT_BIT3	71	VAR_GLOBAL	@TYP:1
+%MX 3.61003.0		     
+
+;
+
+@V 2 78 0
+RTC_BATTERY_LOW	72	VAR_GLOBAL	@TYP:1
+%MX 1.60166.0		     
+
+;
+
+@V 2 79 0
+RTC_DATA_INVALID	73	VAR_GLOBAL	@TYP:1
+%MX 1.60167.0		     
+
+;
+
+@V 2 80 0
+FLASHCARD_PRESENT	74	VAR_GLOBAL	@TYP:1
+%MX 1.60168.0		     
+
+;
+
+@V 2 81 0
+ONBOARD_OUTPUT_OVERLOAD_0_3	75	VAR_GLOBAL	@TYP:1
+%MX 1.60169.0		     
+
+;
+
+@V 2 82 0
+POWER_SUPPLY_MAIN_OK	76	VAR_GLOBAL	@TYP:1
+%MX 1.60171.0		     
+
+;
+
+@V 2 83 0
+POWER_SUPPLY_INPUTS_OK	77	VAR_GLOBAL	@TYP:1
+%MX 1.60172.0		     
+
+;
+
+@V 2 84 0
+POWER_SUPPLY_OUTPUTS_0_3_OK	78	VAR_GLOBAL	@TYP:1
+%MX 1.60173.0		     
+
+;
+
+@V 2 85 0
+KEY_SWITCH_RESET	79	VAR_GLOBAL	@TYP:1
+%MX 1.60178.0		     
+
+;
+
+@V 2 86 0
+KEY_SWITCH_STOP	80	VAR_GLOBAL	@TYP:1
+%MX 1.60179.0		     
+
+;
+
+@V 2 87 0
+KEY_SWITCH_RUN_PROG	81	VAR_GLOBAL	@TYP:1
+%MX 1.60181.0		     
+
+;
+
+@V 2 88 0
+RTC_HOURS	82	VAR_GLOBAL	@TYP:3
+%MW 1.60060		     
+
+;
+
+@V 2 89 0
+RTC_MINUTES	83	VAR_GLOBAL	@TYP:3
+%MW 1.60062		     
+
+;
+
+@V 2 90 0
+RTC_SECONDS	84	VAR_GLOBAL	@TYP:3
+%MW 1.60064		     
+
+;
+
+@V 2 91 0
+RTC_DAY	85	VAR_GLOBAL	@TYP:3
+%MW 1.60068		     
+
+;
+
+@V 2 92 0
+RTC_MONTH	86	VAR_GLOBAL	@TYP:3
+%MW 1.60070		     
+
+;
+
+@V 2 93 0
+RTC_YEAR	87	VAR_GLOBAL	@TYP:3
+%MW 1.60072		     
+
+;
+
+@V 2 94 0
+IB_DEVICE_PARAM_ACTIVATED	88	VAR_GLOBAL	@TYP:1
+%MX 1.60120.0		     
+
+;
+
+@V 2 95 0
+IB_DEVICE_PARAM_READY	89	VAR_GLOBAL	@TYP:1
+%MX 1.60121.0		     
+
+;
+
+@V 2 96 0
+IB_DEVICE_PARAM_ERROR	90	VAR_GLOBAL	@TYP:1
+%MX 1.60122.0		     
+
+;
+
+@V 2 116 0
+ONBOARD_OUTPUT_BIT2	91	VAR_GLOBAL	@TYP:1
+%MX 3.61002.0		     
+
+;
+
+@V 2 124 0
+Q_0_1_0_0	92	VAR_GLOBAL	@TYP:1
+%QX 0.0		     
+
+;
+
+@V 2 125 0
+Q_0_1_0_1	93	VAR_GLOBAL	@TYP:1
+%QX 0.1		     
+@TYP:1# 0
+;
+
+@V 2 126 0
+Q_0_1_0_2	94	VAR_GLOBAL	@TYP:1
+%QX 0.2		     
+
+;
+
+@V 2 127 0
+Q_0_1_0_3	95	VAR_GLOBAL	@TYP:1
+%QX 0.3		     
+@TYP:1# 0
+;
+
+@V 2 128 0
+Q_0_1_0_4	96	VAR_GLOBAL	@TYP:1
+%QX 0.4		     
+@TYP:1# 0
+;
+
+@V 2 129 0
+Q_0_1_0_5	97	VAR_GLOBAL	@TYP:1
+%QX 0.5		     
+@TYP:1# 0
+;
+
+@V 2 130 0
+Q_0_1_0_6	98	VAR_GLOBAL	@TYP:1
+%QX 0.6		     
+@TYP:1# 0
+;
+
+@V 2 131 0
+Q_0_1_0_7	99	VAR_GLOBAL	@TYP:1
+%QX 0.7		     
+@TYP:1# 0
+;
+
+@V 2 132 0
+Q_0_1_1_0	100	VAR_GLOBAL	@TYP:1
+%QX 1.0		     
+
+;
+
+@V 2 133 0
+Q_0_1_1_1	101	VAR_GLOBAL	@TYP:1
+%QX 1.1		     
+
+;
+
+@V 2 134 0
+Q_0_1_1_2	102	VAR_GLOBAL	@TYP:1
+%QX 1.2		     
+
+;
+
+@V 2 135 0
+Q_0_1_1_3	103	VAR_GLOBAL	@TYP:1
+%QX 1.3		     
+
+;
+
+@V 2 136 0
+Q_0_1_1_4	104	VAR_GLOBAL	@TYP:1
+%QX 1.4		     
+
+;
+
+@V 2 137 0
+Q_0_1_1_5	105	VAR_GLOBAL	@TYP:1
+%QX 1.5		     
+
+;
+
+@V 2 138 0
+Q_0_1_1_6	106	VAR_GLOBAL	@TYP:1
+%QX 1.6		     
+
+;
+
+@V 2 139 0
+Q_0_1_1_7	107	VAR_GLOBAL	@TYP:1
+%QX 1.7		     
+
+;
+
+@V 2 140 0
+Q_0_3_1_1_1_SPANNUNGSAUSGANG	108	VAR_GLOBAL	@TYP:18
+%QW 4		     
+@TYP:18# 00#ff14
+;
+
+@V 2 141 0
+Q_0_2_0_0	109	VAR_GLOBAL	@TYP:1
+%QX 2.0		     
+@TYP:1# 0
+;
+
+@V 2 142 0
+Q_0_2_0_1	110	VAR_GLOBAL	@TYP:1
+%QX 2.1		     
+@TYP:1# 0
+;
+
+@V 2 143 0
+Q_0_2_0_2	111	VAR_GLOBAL	@TYP:1
+%QX 2.2		     
+@TYP:1# 0
+;
+
+@V 2 144 0
+StrgPos2Aut	112	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 145 0
+StrgPos6Aut	113	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 146 0
+StrgPos5Aut	114	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 147 0
+StrgPos4Aut	115	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 148 0
+StrgPosGapAut	116	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 149 0
+StrgPos3Aut	117	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 150 0
+StrgPos1Aut	118	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 151 0
+Q_0_2_0_3	119	VAR_GLOBAL	@TYP:1
+%QX 2.3		     
+@TYP:1# 0
+;
+
+@V 2 152 0
+Q_0_2_0_4	120	VAR_GLOBAL	@TYP:1
+%QX 2.4		     
+
+;
+
+@V 2 153 0
+Q_0_2_0_5	121	VAR_GLOBAL	@TYP:1
+%QX 2.5		     
+
+;
+
+@V 2 154 0
+Q_0_2_0_6	122	VAR_GLOBAL	@TYP:1
+%QX 2.6		     
+
+;
+
+@V 2 155 0
+Q_0_2_0_7	123	VAR_GLOBAL	@TYP:1
+%QX 2.7		     
+
+;
+
+@V 2 156 0
+Q_0_2_1_0	124	VAR_GLOBAL	@TYP:1
+%QX 3.0		     
+@TYP:1# 0
+;
+
+@V 2 157 0
+Q_0_2_1_1	125	VAR_GLOBAL	@TYP:1
+%QX 3.1		     
+@TYP:1# 0
+;
+
+@V 2 158 0
+Q_0_2_1_2	126	VAR_GLOBAL	@TYP:1
+%QX 3.2		     
+@TYP:1# 0
+;
+
+@V 2 159 0
+Q_0_2_1_3	127	VAR_GLOBAL	@TYP:1
+%QX 3.3		     
+@TYP:1# 0
+;
+
+@V 2 160 0
+Q_0_2_1_4	128	VAR_GLOBAL	@TYP:1
+%QX 3.4		     
+@TYP:1# 0
+;
+
+@V 2 161 0
+Q_0_2_1_5	129	VAR_GLOBAL	@TYP:1
+%QX 3.5		     
+@TYP:1# 0
+;
+
+@V 2 162 0
+Q_0_2_1_6	130	VAR_GLOBAL	@TYP:1
+%QX 3.6		     
+@TYP:1# 0
+;
+
+@V 2 163 0
+Q_0_2_1_7	131	VAR_GLOBAL	@TYP:1
+%QX 3.7		     
+@TYP:1# 0
+;
+
+@V 2 164 0
+arrRcvBuf	132	VAR_GLOBAL	@TYP:1024
+		     
+
+;
+
+@V 2 165 0
+arrSndBuf	133	VAR_GLOBAL	@TYP:1024
+		     
+
+;
+
+@V 2 166 0
+V1_OpenFor	134	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 167 0
+V1_Open	135	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 168 0
+V2_OpenFor	136	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 169 0
+V2_Open	137	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 170 0
+V3_OpenFor	138	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 171 0
+V3_Open	139	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 172 0
+V4_OpenFor	140	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 173 0
+V4_Open	141	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 174 0
+Close_All_Valves	142	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 175 0
+V1_Close	143	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 176 0
+V2_Close	144	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 177 0
+V3_Close	145	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 178 0
+V4_Close	146	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 179 0
+IPConnectError	147	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 180 0
+IPReceiveError	148	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 181 0
+IPSendError	149	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 182 0
+SendStart	150	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 183 0
+SendDone	151	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 184 0
+NewDataReceived	152	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 185 0
+MixStart	153	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 186 0
+MixFinished	154	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 187 0
+DoseFinished	155	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 188 0
+MixFor	156	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 189 0
+DoseSpeed	157	VAR_GLOBAL	@TYP:18
+		     
+
+;
+
+@V 2 190 0
+DoseFor	158	VAR_GLOBAL	@TYP:12
+		     
+
+;
+
+@V 2 191 0
+MixPos1	159	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 192 0
+MixPosUp	160	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 193 0
+MixPosDown	161	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 194 0
+MixPos2	162	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 195 0
+MixPos3	163	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 196 0
+MixPos4	164	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 197 0
+MixPos5	165	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 198 0
+MixPos6	166	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 199 0
+StrgPosDown	167	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 200 0
+StrgPosUp	168	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 201 0
+StrgPosCent	169	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 202 0
+StrgPos1	170	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 203 0
+StrgPos2	171	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 204 0
+StrgPos3	172	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 205 0
+StrgPosGap	173	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 206 0
+StrgPos4	174	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 207 0
+StrgPos5	175	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 208 0
+StrgPos6	176	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 209 0
+Release_Magnets_5_6_7_8	177	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 210 0
+Magnets78	178	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 211 0
+Sensors_3_4	179	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 212 0
+Release_Magnets_1_2_3_4	180	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 213 0
+Magnets34	181	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 214 0
+Sensors_1_2	182	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 215 0
+DeadmanSwitch	183	VAR_GLOBAL	@TYP:1
+		     
+@TYP:1# 1
+;
+
+@V 2 216 0
+LED4	184	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 217 0
+LED3	185	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 218 0
+LED2	186	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 219 0
+LED1	187	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 220 0
+DoseStart	188	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 221 0
+GrapMix	189	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 222 0
+GrapMixStart	190	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 223 0
+GrabMixStart	191	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 224 0
+LiftVesselStart	192	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 225 0
+V000	193	VAR_GLOBAL	@TYP:17
+		     
+
+;
+
+@V 2 226 0
+Magnet12	194	VAR_GLOBAL	@TYP:17
+		     
+
+;
+
+@V 2 227 0
+MPos3	195	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 228 0
+MixPos7	196	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 229 0
+MixVertStart	197	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 230 0
+SendRequest	198	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 231 0
+MixVertStop	199	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 232 0
+StrgVertStart	200	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 233 0
+StrgVertStop	201	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 234 0
+StrgHorStart	202	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 235 0
+StrgHorStop	203	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 236 0
+StrgPos1Test	204	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 237 0
+StrgHortPos	205	VAR_GLOBAL	@TYP:3
+		     
+
+;
+
+@V 2 238 0
+StrgHorRef	206	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 239 0
+StrgVertPos	207	VAR_GLOBAL	@TYP:3
+		     
+
+;
+
+@V 2 240 0
+StrgVertRef	208	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 241 0
+MixVertPos	209	VAR_GLOBAL	@TYP:3
+		     
+
+;
+
+@V 2 242 0
+MixVertRef	210	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 243 0
+StrgVertRelRobot	211	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 244 0
+StrgVertRelPlate	212	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 245 0
+MixVertRelRobot	213	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 246 0
+S010	214	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 247 0
+S013	215	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 248 0
+S016	216	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 249 0
+StrgHorStartAut	217	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 250 0
+StrgPosDownAut	218	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 251 0
+StrgPosUpAut	219	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 252 0
+StrgVertStartAut	220	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 253 0
+StrgVertRelPlateAut	221	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 254 0
+StrgPosCentAut	222	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 255 0
+StrgVertRelRobotAut	223	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 256 0
+Magnets34Aut	224	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 257 0
+Magnets56Aut	225	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 258 0
+Magnets78Aut	226	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 259 0
+SourcePosOut	227	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 260 0
+TRUE1	228	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 261 0
+StrgPosRelPlate	229	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 262 0
+StrgPosRelPlateAut	230	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 263 0
+S007	231	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 264 0
+Idle_StrgIN	232	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 265 0
+StrhPos4	233	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 266 0
+Idle_StrgOut	234	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 267 0
+StrgPosRelRobot	235	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 268 0
+IdleStrgOut	236	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 269 0
+IdleStrgIn	237	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 270 0
+MixPos2Aut	238	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 271 0
+MixPos3Aut	239	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 272 0
+MixPos4Aut	240	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 273 0
+MixVertStartAut	241	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 274 0
+MixPos1Aut	242	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 275 0
+Magnets12Aut	243	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 276 0
+MixVertRelRobotAut	244	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 277 0
+MixIdle	245	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 278 0
+StrgIdle	246	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 279 0
+MixPosUpAut	247	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 280 0
+MixPosDownAut	248	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 281 0
+MixPos6Aut	249	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 282 0
+MixPos5Aut	250	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 283 0
+MixVertRefAut	251	VAR_GLOBAL	@TYP:1
+		     
+
+;
+
+@V 2 284 0
+MixDownAut	252	VAR_GLOBAL	@TYP:1
+		     
+
+;
+

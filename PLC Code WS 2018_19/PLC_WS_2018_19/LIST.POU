@@ -1,0 +1,9 @@
+FUNCTION_BLOCK	Mixing_Dosing			PT=1	Mixing_Dosing	HIDDEN=0	
+FUNCTION_BLOCK	Mix_Vertical_Pos			PT=1	Mix_Vertical_Pos	HIDDEN=0	
+FUNCTION_BLOCK	Storage_Horizontal_Pos			PT=1	Storage_Horizontal_Pos	HIDDEN=0	
+FUNCTION_BLOCK	Sensors_Magnets			PT=1	Sensors_Magnets	HIDDEN=0	
+FUNCTION_BLOCK	Storage_Vertical_Pos			PT=1	Storage_Vertical_Pos	HIDDEN=0	
+FUNCTION_BLOCK	Data_Receive			PT=1	Data_Receive	HIDDEN=0	<1>
+FUNCTION_BLOCK	TCP_IP_Conn			PT=1	TCP_IP_Conn	HIDDEN=0	
+FUNCTION_BLOCK	OpenValve			PT=1	OpenValve	HIDDEN=0	
+PROGRAM	Main			PT=1	Main	HIDDEN=0	

@@ -1,0 +1,46 @@
+(*
+T: FUNCTION_BLOCK Mix_Vertical_Pos
+FW: NO
+CI#: 41
+QSL: 6
+QVE: 6
+QVPC: 6
+QPar: 0
+QFBI: 0
+*)
+@V 1 6 0
+MixVertPos	1	VAR_EXTERNAL	@TYP:3
+@RV 209		     
+
+;
+
+@V 1 7 0
+Q_0_2_0_0	2	VAR_EXTERNAL	@TYP:1
+@RV 109		     
+
+;
+
+@V 1 8 0
+Q_0_2_0_2	3	VAR_EXTERNAL	@TYP:1
+@RV 111		     
+
+;
+
+@V 1 9 0
+Q_0_2_0_1	4	VAR_EXTERNAL	@TYP:1
+@RV 110		     
+
+;
+
+@V 1 10 0
+Q_0_2_0_3	5	VAR_EXTERNAL	@TYP:1
+@RV 119		     
+
+;
+
+@V 2 1 0
+@T_Mix_Vertical_Pos_00	6	VAR	@TYP:3
+		     
+
+;
+PFW: RDT

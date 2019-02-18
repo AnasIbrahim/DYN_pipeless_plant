@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceProfile DeviceProfileName="ILC 130 v2.8.2 (Core: 2.8.2)" DeviceProfileVersion="2.8.2" UpdateType="Manual">
+  <CILGenerator Name="Ade.Eclr.CilGenerator" Version="2.2.1" IsNative="false" />
+  <CILCompiler Prefix="cilc" ProcessorType="nios2" ProgrammingModel="gcc3" Version="2.0.0" CompilerOptions="2" />
+  <SimulationSupported>false</SimulationSupported>
+  <MetaDump Version="1.1.0" />
+  <ImageBuilder Version="1.0.0" />
+  <Assembly Name="eclriodrv_ib" Version="2.0.0" IsNative="true" />
+  <Assembly Name="Ilc150dlc" Version="2.0.0" IsNative="true" />
+  <Assembly Name="fb_RS232" Version="1.0.0" IsNative="true" />
+  <Assembly Name="fb_cpu_ctrl" Version="1.0.0" IsNative="true" />
+  <Assembly Name="fb_ib_ctrl" Version="1.0.0" IsNative="true" />
+  <Assembly Name="fb_ip" Version="1.0.26" IsNative="true" />
+  <Assembly Name="fb_IpTime" Version="1.0.0" IsNative="true" />
+  <Assembly Name="fb_pcp" Version="1.0.1" IsNative="true" />
+  <Assembly Name="fb_file_notify" Version="1.0.0" IsNative="true" />
+  <Assembly Name="LICENSE" Version="1.0.2" IsNative="true" />
+  <Assembly Name="ProConOS" Version="1.5.0" IsNative="true" />
+  <Assembly Name="Bit_Util" Version="1.2.0" IsNative="false" />
+  <Assembly Name="convert" Version="1.0.0" IsNative="true" />
+  <Assembly Name="mscorlib" Version="2.4.0" IsNative="true" />
+  <Assembly Name="pcoslib" Version="2.4.0" IsNative="true" />
+  <Assembly Name="eclrlib" Version="2.3.0" IsNative="true" />
+  <Assembly Name="Iec61131Standard" Version="1.7.0" IsNative="false" />
+  <Assembly Name="dummyio" Version="1.4.0" IsNative="false" />
+  <DeviceDescription CPUType="769" MaximumProgramSize="589824" MaximumDataSize="196604" MaximumRetainDataSize="8184" MaximumImageSize="4194304" MaximumImageFilesSize="131072" IsDownloadChangesCapable="true" ScheduleInterval="1000" ThreadingPriorityLevel="19" ThreadingType="Preemptive" LogicAnalyzerState="Inactive">
+    <Assembly Name="mscorlib" Version="2.4.0" IsNative="true" />
+    <Assembly Name="eclrlib" Version="2.3.0" IsNative="true" />
+    <Assembly Name="pcoslib" Version="2.5.0" IsNative="true" />
+    <Assembly Name="ilc150" Version="1.0.1" IsNative="true" />
+    <Assembly Name="Ilc150Dlc" Version="2.0.0" IsNative="true" />
+    <Assembly Name="eclriodrv_ib" Version="2.0.0" IsNative="true" />
+    <Assembly Name="AddLog" Version="0.0.0" IsNative="true" />
+    <Assembly Name="fb_pcp" Version="1.0.0" IsNative="true" />
+    <Assembly Name="fb_ip" Version="1.0.26" IsNative="true" />
+    <Assembly Name="fb_IpTime" Version="1.0.0" IsNative="true" />
+    <Assembly Name="LICENSE" Version="1.0.2" IsNative="true" />
+    <Assembly Name="FB_RS232" Version="1.0.0" IsNative="true" />
+    <Assembly Name="fb_ib_ctrl" Version="1.0.0" IsNative="true" />
+    <Assembly Name="fb_cpu_ctrl" Version="1.0.0" IsNative="true" />
+    <Assembly Name="fb_file_notify" Version="1.0.0" IsNative="true" />
+  </DeviceDescription>
+  <VirtualLimitation UserCodeSize="196608" UserCodeSizeWarningLevel="190000" DataSize="-1" DataSizeWarningLevel="-1" RetainDataSize="-1" RetainDataSizeWarningLevel="-1" />
+  <DownloadPouInfoList>true</DownloadPouInfoList>
+  <DownloadSfcPouList>true</DownloadSfcPouList>
+  <OnlineIncludeFile>.\_s49IBG4\files.ini</OnlineIncludeFile>
+  <OnlineIncludeFile>.\_s49IBG4\config.svc</OnlineIncludeFile>
+  <OnlineIncludeFile>.\_s49IBG4\DIAG32</OnlineIncludeFile>
+  <OnlineIncludeFile>.\_s49IBG4\Data.INI</OnlineIncludeFile>
+  <OnlineIncludeFile>.\_s49IBG4\Project.ini</OnlineIncludeFile>
+  <OnlineIncludeFile>.\_s49IBG4\startup.dat</OnlineIncludeFile>
+  <TaskProperties MinimumInterval="1000" MaximumInterval="1800000000" DefaultIntervalNewTask="100000" MinimumWatchdog="1000" MaximumWatchdog="5000000" DefaultWatchdogNewTask="100000" MaximumUserTasks="16" TaskTimeResolution="1000" AvailablePriorities="16" UniquePriorities="false" />
+</ResourceProfile>
