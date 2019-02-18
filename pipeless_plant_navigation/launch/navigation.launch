@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find pipeless_plant_navigation)/launch/move_base.launch"/>
+  <include file="$(find pipeless_plant_navigation)/launch/plant_map_server.launch"/>
+</launch>

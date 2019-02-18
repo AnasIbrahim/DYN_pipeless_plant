@@ -8,32 +8,34 @@ from geometry_msgs.msg import *
 
 def mixing_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.51
-    goal.position.y = 0.07
-    goal.orientation.w = 1
+    goal.position.x = 0.7
+    goal.position.y = 0.0
+    goal.orientation.z = 0.037
+    goal.orientation.w = 0.999
     send_goal(goal)
 
 def storage_station_handle(req):
     goal = Pose()
-    goal.position.x = -0.44 
-    goal.position.y = -0.02
-    goal.orientation.z = 1
+    goal.position.x = -0.7
+    goal.position.y = 0.0
+    goal.orientation.z = 0.999
+    goal.orientation.w = 0.01
     send_goal(goal)
 
 def black_yellow_filling_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.01
-    goal.position.y = -0.8
-    goal.orientation.z = -0.700
-    goal.orientation.w = 0.713
+    goal.position.x = 0.04
+    goal.position.y = -1.15
+    goal.orientation.z = -0.689
+    goal.orientation.w = 0.724
     send_goal(goal)
 
 def red_blue_filling_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.01 
-    goal.position.y = 0.82
-    goal.orientation.z = 0.74
-    goal.orientation.w = 0.67
+    goal.position.x = -0.05 
+    goal.position.y = 1.13
+    goal.orientation.z = 0.7
+    goal.orientation.w = 0.713
     send_goal(goal)
 
 def send_goal(pose):

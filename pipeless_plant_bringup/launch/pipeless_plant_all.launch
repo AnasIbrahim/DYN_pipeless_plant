@@ -9,5 +9,9 @@
 
   <!-- Localization related -->
   <include file="$(find ceiling_cam_fiducials_odom_ekf)/launch/ceiling_localization.launch" />
-
+  
+  <!-- navigation related-->
+  <include file="$(find pipeless_plant_navigation)/launch/navigation.launch" />
+  <node name="move_to_station" pkg="pipeless_plant_navigation" type="move_to_station.py" output="screen"/>
+   
 </launch>
