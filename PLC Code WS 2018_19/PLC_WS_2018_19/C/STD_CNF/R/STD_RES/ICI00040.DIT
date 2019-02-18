@@ -1,0 +1,82 @@
+(*
+T: FUNCTION_BLOCK Sensors_Magnets
+FW: NO
+CI#: 40
+QSL: 12
+QVE: 12
+QVPC: 12
+QPar: 0
+QFBI: 0
+*)
+@V 1 6 0
+Sensors_1_2	1	VAR_EXTERNAL	@TYP:1
+@RV 182		     
+
+;
+
+@V 1 7 0
+Sensors_3_4	2	VAR_EXTERNAL	@TYP:1
+@RV 179		     
+
+;
+
+@V 1 8 0
+ONBOARD_INPUT_BIT0	3	VAR_EXTERNAL	@TYP:1
+@RV 61		     
+
+;
+
+@V 1 9 0
+ONBOARD_INPUT_BIT1	4	VAR_EXTERNAL	@TYP:1
+@RV 62		     
+
+;
+
+@V 1 10 0
+ONBOARD_INPUT_BIT2	5	VAR_EXTERNAL	@TYP:1
+@RV 63		     
+
+;
+
+@V 1 11 0
+ONBOARD_INPUT_BIT3	6	VAR_EXTERNAL	@TYP:1
+@RV 64		     
+
+;
+
+@V 1 12 0
+ONBOARD_OUTPUT_BIT0	7	VAR_EXTERNAL	@TYP:1
+@RV 69		     
+
+;
+
+@V 1 13 0
+ONBOARD_OUTPUT_BIT2	8	VAR_EXTERNAL	@TYP:1
+@RV 91		     
+
+;
+
+@V 1 14 0
+ONBOARD_OUTPUT_BIT1	9	VAR_EXTERNAL	@TYP:1
+@RV 70		     
+
+;
+
+@V 1 15 0
+ONBOARD_OUTPUT_BIT3	10	VAR_EXTERNAL	@TYP:1
+@RV 71		     
+
+;
+
+@V 1 16 0
+Release_Magnets_1_2_3_4	11	VAR_EXTERNAL	@TYP:1
+@RV 180		     
+
+;
+
+@V 1 17 0
+Release_Magnets_5_6_7_8	12	VAR_EXTERNAL	@TYP:1
+@RV 177		     
+
+;
+

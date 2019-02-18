@@ -1,0 +1,43 @@
+(*
+T: FUNCTION_BLOCK TON
+FW: YES
+CI#: 45
+QSL: 0
+QJM: 2
+QJ: 2
+*)
+		LD	@IV 1
+		ANDN	@IV 7
+		ST	@IV 6
+		R	@IV 5
+		LD	@IV 1
+		ST	@IV 7
+		JMPCN	@LBL 1
+		LD	@IV 5
+		RETC	
+		LD	@IV 6
+		BOOL_TO_BYTE	
+		ST	@IV 11
+		PARV	@IV 11
+		PARV	@IV 2
+		PARA	@IV 9
+		PARA	@IV 8
+		PARA	@IV 10
+		CAL	@SFB 0
+		LD	@IV 9
+		BYTE_TO_BOOL	
+		ST	@IV 4
+		JMPCN	@LBL 2
+		S	@IV 5
+		LD	@IV 2
+		ST	@IV 3
+		RET	
+	@LBL 2		
+		LD	@IV 8
+		ST	@IV 3
+		RET	
+	@LBL 1		
+		LD	BOOL# 0
+		ST	@IV 4
+		LD	TIME# 0S0
+		ST	@IV 3

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Ethernet Topology-->
+<!--(C) 2005 - 2015 PHOENIX CONTACT-->
+<!--www.phoenixcontact.com-->
+<EthernetTopology>
+  <Header>
+    <ET_File_Version>18.2.0.2349</ET_File_Version>
+  </Header>
+  <Global_Data>
+    <Date>
+      <Physical_Link>1970-01-01T00:00:00</Physical_Link>
+      <ScanDate>1970-01-01T00:00:00</ScanDate>
+    </Date>
+    <View_List>
+      <View>
+        <Document_ID Id="5a4e5723-b19c-4406-9b79-8a60a506878f" TabPageIndex="1" />
+        <TabPageName />
+        <DocPosition X="-6.303814" Y="34" />
+        <DocScale>1</DocScale>
+        <DocumentSize Width="737.9806" Height="171.9114" />
+        <DocumentTopLeft X="-6.303814" Y="34" />
+      </View>
+    </View_List>
+    <SNMP>
+      <Read_Community />
+    </SNMP>
+    <End_Device_Without_LLDP_Included>
+      <Visible>False</Visible>
+    </End_Device_Without_LLDP_Included>
+    <Device_Out_Of_Bounds>
+      <Visible>False</Visible>
+    </Device_Out_Of_Bounds>
+    <Auto_Refresh>
+      <Run>False</Run>
+      <Spacing>120</Spacing>
+    </Auto_Refresh>
+  </Global_Data>
+  <Device_List />
+</EthernetTopology>

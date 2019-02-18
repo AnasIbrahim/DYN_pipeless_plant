@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Ethernet Topology-->
+<!--(C) 2005 - 2015 PHOENIX CONTACT-->
+<!--www.phoenixcontact.com-->
+<EthernetTopology>
+  <Header>
+    <ET_File_Version>18.2.0.2349</ET_File_Version>
+  </Header>
+  <Global_Data>
+    <Date>
+      <Physical_Link>1970-01-01T00:00:00</Physical_Link>
+      <ScanDate>1970-01-01T00:00:00</ScanDate>
+    </Date>
+    <View_List />
+    <SNMP>
+      <Read_Community />
+    </SNMP>
+    <End_Device_Without_LLDP_Included>
+      <Visible>False</Visible>
+    </End_Device_Without_LLDP_Included>
+    <Device_Out_Of_Bounds>
+      <Visible>False</Visible>
+    </Device_Out_Of_Bounds>
+    <Auto_Refresh>
+      <Run>False</Run>
+      <Spacing>120</Spacing>
+    </Auto_Refresh>
+  </Global_Data>
+</EthernetTopology>

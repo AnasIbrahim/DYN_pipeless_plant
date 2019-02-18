@@ -1,0 +1,82 @@
+(*
+T: FUNCTION_BLOCK Mixing_Dosing
+FW: NO
+CI#: 39
+QSL: 12
+QVE: 12
+QVPC: 12
+QPar: 0
+QFBI: 4
+*)
+@V 1 6 0
+TON_1	1	VAR	@FB:45
+		     
+
+;
+
+@V 1 7 0
+RS_1	2	VAR	@FB:44
+		     
+
+;
+
+@V 1 12 0
+MixStart	3	VAR_EXTERNAL	@TYP:1
+@RV 153		     
+
+;
+
+@V 1 13 0
+Q_0_1_0_2	4	VAR_EXTERNAL	@TYP:1
+@RV 94		     
+
+;
+
+@V 1 14 0
+MixFor	5	VAR_EXTERNAL	@TYP:12
+@RV 156		     
+
+;
+
+@V 1 19 0
+TON_2	6	VAR	@FB:45
+		     
+
+;
+
+@V 1 24 0
+DoseStart	7	VAR_EXTERNAL	@TYP:1
+@RV 188		     
+
+;
+
+@V 1 25 0
+DoseFor	8	VAR_EXTERNAL	@TYP:12
+@RV 158		     
+
+;
+
+@V 1 30 0
+RS_2	9	VAR	@FB:44
+		     
+
+;
+
+@V 1 35 0
+Q_0_3_1_1_1_SPANNUNGSAUSGANG	10	VAR_EXTERNAL	@TYP:18
+@RV 108		     
+
+;
+
+@V 1 36 0
+DoseSpeed	11	VAR_EXTERNAL	@TYP:18
+@RV 157		     
+
+;
+
+@V 1 41 0
+NoDose	12	VAR	@TYP:18
+		     
+@TYP:18# 00#0000
+;
+

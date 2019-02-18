@@ -1,0 +1,20 @@
+[ONL]
+PERMANENT_AS_BOOTPROJECT=1
+ALWAYS_ALLOW_REALTIME_VIOLATION=0
+DOWNLOAD_SOURCES_WITH_BOOTPROJECT=0
+[Online]
+CNTRL_DLG_PLACEMENT=0,1,0,996,-1,-1,1169,189,1411,502
+ONLINE_REPRESENTATION=0,7,3
+DOWNLOAD_DLG_PLACEMENT=0,1,1760,84,-1,-1,732,297,1231,740
+Include_Bootproject_001=.\_s49IBG4\startup.dat
+Include_Bootproject_002=.\_s49IBG4\IPPNIO.XML
+Include_Bootproject_003=.\_s49IBG4\config.svc
+Include_Bootproject_004=.\_s49IBG4\Data.INI
+PreDownLoadProject_001=.\_s49IBG4\startup.dat
+PreDownLoadProject_002=.\_s49IBG4\IPPNIO.XML
+PreDownLoadProject_003=.\_s49IBG4\config.svc
+PreDownLoadProject_004=.\_s49IBG4\Data.INI
+PreDownLoadBootproject_001=.\_s49IBG4\DIAG32
+PreDownLoadBootproject_002=.\_s49IBG4\Project.ini
+PreDownLoadBootproject_003=.\_s49IBG4\IPPNIO.XML
+PreDC_UploadFile_001=Data.INI .\_s49IBG4\old\Data.INI

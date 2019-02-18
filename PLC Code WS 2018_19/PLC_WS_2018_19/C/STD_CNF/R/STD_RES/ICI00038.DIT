@@ -1,0 +1,268 @@
+(*
+T: FUNCTION_BLOCK Data_Receive
+FW: NO
+CI#: 38
+QSL: 43
+QVE: 43
+QVPC: 43
+QPar: 0
+QFBI: 7
+*)
+@V 1 6 0
+op_int	1	VAR	@TYP:3
+		     
+
+;
+
+@V 1 11 0
+V1_Open	2	VAR_EXTERNAL	@TYP:1
+@RV 135		     
+
+;
+
+@V 1 12 0
+V1_OpenFor	3	VAR_EXTERNAL	@TYP:12
+@RV 134		     
+
+;
+
+@V 1 13 0
+arrRcvBuf	4	VAR_EXTERNAL	@TYP:1024
+@RV 132		     
+
+;
+
+@V 1 18 0
+F_TRIG_1	5	VAR	@FB:49
+		     
+
+;
+
+@V 1 23 0
+Q_0_1_1_0	6	VAR_EXTERNAL	@TYP:1
+@RV 100		     
+
+;
+
+@V 1 24 0
+NewDataReceived	7	VAR_EXTERNAL	@TYP:1
+@RV 152		     
+
+;
+
+@V 1 25 0
+V1_Close	8	VAR_EXTERNAL	@TYP:1
+@RV 143		     
+
+;
+
+@V 1 30 0
+F_TRIG_2	9	VAR	@FB:49
+		     
+
+;
+
+@V 1 35 0
+Q_0_1_1_4	10	VAR_EXTERNAL	@TYP:1
+@RV 104		     
+
+;
+
+@V 1 36 0
+V2_Open	11	VAR_EXTERNAL	@TYP:1
+@RV 137		     
+
+;
+
+@V 1 37 0
+V2_OpenFor	12	VAR_EXTERNAL	@TYP:12
+@RV 136		     
+
+;
+
+@V 1 38 0
+V2_Close	13	VAR_EXTERNAL	@TYP:1
+@RV 144		     
+
+;
+
+@V 1 39 0
+V4_Close	14	VAR_EXTERNAL	@TYP:1
+@RV 146		     
+
+;
+
+@V 1 40 0
+V4_OpenFor	15	VAR_EXTERNAL	@TYP:12
+@RV 140		     
+
+;
+
+@V 1 41 0
+V4_Open	16	VAR_EXTERNAL	@TYP:1
+@RV 141		     
+
+;
+
+@V 1 42 0
+V3_Close	17	VAR_EXTERNAL	@TYP:1
+@RV 145		     
+
+;
+
+@V 1 43 0
+V3_OpenFor	18	VAR_EXTERNAL	@TYP:12
+@RV 138		     
+
+;
+
+@V 1 44 0
+V3_Open	19	VAR_EXTERNAL	@TYP:1
+@RV 139		     
+
+;
+
+@V 1 49 0
+F_TRIG_3	20	VAR	@FB:49
+		     
+
+;
+
+@V 1 50 0
+F_TRIG_4	21	VAR	@FB:49
+		     
+
+;
+
+@V 1 55 0
+Q_0_1_1_2	22	VAR_EXTERNAL	@TYP:1
+@RV 102		     
+
+;
+
+@V 1 56 0
+Q_0_1_1_5	23	VAR_EXTERNAL	@TYP:1
+@RV 105		     
+
+;
+
+@V 1 57 0
+Q_0_2_1_0	24	VAR_EXTERNAL	@TYP:1
+@RV 124		     
+
+;
+
+@V 1 58 0
+StrgVertPos	25	VAR_EXTERNAL	@TYP:3
+@RV 207		     
+
+;
+
+@V 1 59 0
+StrgVertStop	26	VAR_EXTERNAL	@TYP:1
+@RV 201		     
+
+;
+
+@V 1 64 0
+TON_1	27	VAR	@FB:45
+		     
+
+;
+
+@V 1 69 0
+StrgHortPos	28	VAR_EXTERNAL	@TYP:3
+@RV 205		     
+
+;
+
+@V 1 70 0
+Q_0_1_0_1	29	VAR_EXTERNAL	@TYP:1
+@RV 93		     
+
+;
+
+@V 1 71 0
+StrgHorStop	30	VAR_EXTERNAL	@TYP:1
+@RV 203		     
+
+;
+
+@V 1 76 0
+TON_2	31	VAR	@FB:45
+		     
+
+;
+
+@V 1 81 0
+MixStart	32	VAR_EXTERNAL	@TYP:1
+@RV 153		     
+
+;
+
+@V 1 82 0
+MixFor	33	VAR_EXTERNAL	@TYP:12
+@RV 156		     
+
+;
+
+@V 1 83 0
+DoseStart	34	VAR_EXTERNAL	@TYP:1
+@RV 188		     
+
+;
+
+@V 1 84 0
+DoseFor	35	VAR_EXTERNAL	@TYP:12
+@RV 158		     
+
+;
+
+@V 1 85 0
+DoseSpeed	36	VAR_EXTERNAL	@TYP:18
+@RV 157		     
+
+;
+
+@V 1 86 0
+Q_0_2_1_5	37	VAR_EXTERNAL	@TYP:1
+@RV 129		     
+
+;
+
+@V 1 87 0
+MixVertPos	38	VAR_EXTERNAL	@TYP:3
+@RV 209		     
+
+;
+
+@V 1 88 0
+MixVertStop	39	VAR_EXTERNAL	@TYP:1
+@RV 199		     
+
+;
+
+@V 1 93 0
+TON_3	40	VAR	@FB:45
+		     
+
+;
+
+@V 1 94 0
+Magnet	41	VAR	@TYP:3
+		     
+
+;
+
+@V 1 99 0
+Release_Magnets_1_2_3_4	42	VAR_EXTERNAL	@TYP:1
+@RV 180		     
+
+;
+
+@V 1 100 0
+Release_Magnets_5_6_7_8	43	VAR_EXTERNAL	@TYP:1
+@RV 177		     
+
+;
+

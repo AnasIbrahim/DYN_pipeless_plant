@@ -1,0 +1,373 @@
+93
+82
+0 0 92 0
+@V2 2 RESOURCE STD_RES 0 0 0
+	
+86
+91 1 0 0
+@V2 10 @ MainV 0 0 0
+F C\STD_CNF\R\STD_RES\MainV.vb
+86
+92 1 0 0
+@V2 10 @ Global_Variables 0 0 0
+F C\STD_CNF\R\STD_RES\Global_Variables.vb
+12
+48 1 42 0
+@V2 12 @ FUNCTIONS 0 0 0
+	
+78
+49 2 0 0
+@V2 6 SEL_WORD SEL_WORD 0 57 0
+	
+78
+50 2 0 0
+@V2 6 SEL_BOOL SEL_BOOL 0 56 0
+	
+78
+51 2 0 0
+@V2 6 BYTE_TO_DINT BYTE_TO_DINT 0 55 0
+	
+78
+52 2 0 0
+@V2 6 REAL_TO_WORD REAL_TO_WORD 0 54 0
+	
+78
+53 2 0 0
+@V2 6 BYTE_TO_BOOL BYTE_TO_BOOL 0 53 0
+	
+78
+54 2 0 0
+@V2 6 DINT_TO_TIME DINT_TO_TIME 0 52 0
+	
+78
+55 2 0 0
+@V2 6 BYTE_TO_INT BYTE_TO_INT 0 51 0
+	
+78
+56 2 0 0
+@V2 6 INT_TO_REAL INT_TO_REAL 0 50 0
+	
+78
+57 2 0 0
+@V2 6 MAX MAX 0 34 0
+	
+78
+58 2 0 0
+@V2 6 MIN MIN 0 33 0
+	
+78
+59 2 0 0
+@V2 6 NEG NEG 0 32 0
+	
+78
+60 2 0 0
+@V2 6 ATAN ATAN 0 31 0
+	
+78
+61 2 0 0
+@V2 6 ACOS ACOS 0 30 0
+	
+78
+62 2 0 0
+@V2 6 ASIN ASIN 0 29 0
+	
+78
+63 2 0 0
+@V2 6 TAN TAN 0 28 0
+	
+78
+64 2 0 0
+@V2 6 COS COS 0 27 0
+	
+78
+65 2 0 0
+@V2 6 SIN SIN 0 26 0
+	
+78
+66 2 0 0
+@V2 6 EXP EXP 0 25 0
+	
+78
+67 2 0 0
+@V2 6 LOG LOG 0 24 0
+	
+78
+68 2 0 0
+@V2 6 LN LN 0 23 0
+	
+78
+69 2 0 0
+@V2 6 SQRT SQRT 0 22 0
+	
+78
+70 2 0 0
+@V2 6 ABS ABS 0 21 0
+	
+78
+71 2 0 0
+@V2 6 ROL ROL 0 20 0
+	
+78
+72 2 0 0
+@V2 6 ROR ROR 0 19 0
+	
+78
+73 2 0 0
+@V2 6 SHR SHR 0 18 0
+	
+78
+74 2 0 0
+@V2 6 SHL SHL 0 17 0
+	
+78
+75 2 0 0
+@V2 6 MOD MOD 0 16 0
+	
+78
+76 2 0 0
+@V2 6 DIV DIV 0 15 0
+	
+78
+77 2 0 0
+@V2 6 SUB SUB 0 14 0
+	
+78
+78 2 0 0
+@V2 6 MUL MUL 0 13 0
+	
+78
+79 2 0 0
+@V2 6 ADD ADD 0 12 0
+	
+78
+80 2 0 0
+@V2 6 NE NE 0 11 0
+	
+78
+81 2 0 0
+@V2 6 LT LT 0 10 0
+	
+78
+82 2 0 0
+@V2 6 LE LE 0 9 0
+	
+78
+83 2 0 0
+@V2 6 EQ EQ 0 8 0
+	
+78
+84 2 0 0
+@V2 6 GT GT 0 7 0
+	
+78
+85 2 0 0
+@V2 6 GE GE 0 6 0
+	
+78
+86 2 0 0
+@V2 6 NOT NOT 0 5 0
+	
+78
+87 2 0 0
+@V2 6 XOR XOR 0 4 0
+	
+78
+88 2 0 0
+@V2 6 OR OR 0 3 0
+	
+78
+89 2 0 0
+@V2 6 EXPT EXPT 0 2 0
+	
+78
+90 2 0 0
+@V2 6 AND AND 0 1 0
+	
+84
+1 1 46 0
+@V2 3 @ STD_TSK 0 0 0
+F 
+80
+2 2 45 0
+@V2 4 Main Main 1 35 0
+	
+70
+3 3 5 0
+@V2 5 OpenValve OpenValve_1 2 36 2
+	
+70
+14 4 0 0
+@V2 5 TON TON_1 13 45 6
+	
+70
+15 4 0 0
+@V2 5 RS RS_1 14 44 7
+	
+70
+16 4 0 0
+@V2 5 RS RS_2 15 44 8
+	
+70
+17 4 0 0
+@V2 5 TON TON_2 16 45 10
+	
+70
+18 4 0 0
+@V2 5 TON TON_3 17 45 12
+	
+70
+4 3 3 0
+@V2 5 TCP_IP_Conn TCP_IP_Conn_1 3 37 7
+	
+70
+19 4 0 0
+@V2 5 IP_CONNECT IP_CONNECT_1 18 48 2
+	
+70
+20 4 0 0
+@V2 5 IP_URCV IP_URCV_1 19 46 3
+	
+70
+21 4 0 0
+@V2 5 IP_USEND IP_USEND_1 20 47 4
+	
+70
+5 3 7 0
+@V2 5 Data_Receive Data_Receive_1 4 38 8
+	
+70
+22 4 0 0
+@V2 5 F_TRIG F_TRIG_1 21 49 5
+	
+70
+23 4 0 0
+@V2 5 F_TRIG F_TRIG_2 22 49 9
+	
+70
+24 4 0 0
+@V2 5 F_TRIG F_TRIG_3 23 49 20
+	
+70
+25 4 0 0
+@V2 5 F_TRIG F_TRIG_4 24 49 21
+	
+70
+26 4 0 0
+@V2 5 TON TON_1 25 45 27
+	
+70
+27 4 0 0
+@V2 5 TON TON_2 26 45 31
+	
+70
+28 4 0 0
+@V2 5 TON TON_3 27 45 40
+	
+70
+6 3 5 0
+@V2 5 OpenValve OpenValve_2 5 36 9
+	
+70
+29 4 0 0
+@V2 5 TON TON_1 28 45 6
+	
+70
+30 4 0 0
+@V2 5 RS RS_1 29 44 7
+	
+70
+31 4 0 0
+@V2 5 RS RS_2 30 44 8
+	
+70
+32 4 0 0
+@V2 5 TON TON_2 31 45 10
+	
+70
+33 4 0 0
+@V2 5 TON TON_3 32 45 12
+	
+70
+7 3 5 0
+@V2 5 OpenValve OpenValve_3 6 36 15
+	
+70
+34 4 0 0
+@V2 5 TON TON_1 33 45 6
+	
+70
+35 4 0 0
+@V2 5 RS RS_1 34 44 7
+	
+70
+36 4 0 0
+@V2 5 RS RS_2 35 44 8
+	
+70
+37 4 0 0
+@V2 5 TON TON_2 36 45 10
+	
+70
+38 4 0 0
+@V2 5 TON TON_3 37 45 12
+	
+70
+8 3 5 0
+@V2 5 OpenValve OpenValve_4 7 36 16
+	
+70
+39 4 0 0
+@V2 5 TON TON_1 38 45 6
+	
+70
+40 4 0 0
+@V2 5 RS RS_1 39 44 7
+	
+70
+41 4 0 0
+@V2 5 RS RS_2 40 44 8
+	
+70
+42 4 0 0
+@V2 5 TON TON_2 41 45 10
+	
+70
+43 4 0 0
+@V2 5 TON TON_3 42 45 12
+	
+70
+9 3 0 0
+@V2 5 Storage_Vertical_Pos Storage_Vertical_Pos_1 8 42 27
+	
+70
+10 3 0 0
+@V2 5 Storage_Horizontal_Pos Storage_Horizontal_Pos_1 9 43 28
+	
+70
+11 3 0 0
+@V2 5 Sensors_Magnets Sensors_Magnets_1 10 40 29
+	
+70
+12 3 0 0
+@V2 5 Mix_Vertical_Pos Mix_Vertical_Pos_1 11 41 30
+	
+70
+13 3 4 0
+@V2 5 Mixing_Dosing Mixing_Dosing_1 12 39 31
+	
+70
+44 4 0 0
+@V2 5 TON TON_1 43 45 1
+	
+70
+45 4 0 0
+@V2 5 RS RS_1 44 44 2
+	
+70
+46 4 0 0
+@V2 5 TON TON_2 45 45 6
+	
+70
+47 4 0 0
+@V2 5 RS RS_2 46 44 9
+	
