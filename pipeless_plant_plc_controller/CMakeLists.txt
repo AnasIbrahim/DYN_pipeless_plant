@@ -59,6 +59,7 @@ add_service_files(
   colour.srv
   doser.srv
   motor.srv
+  magnet.srv
 )
 
 ## Generate actions in the 'action' folder

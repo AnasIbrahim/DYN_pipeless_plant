@@ -15,9 +15,9 @@ def tcp_send(tx):
 
 def colour_red_handler(color):
     if color.time==0:
-        data[1:7]=[4,0,0,1,0,0,0]
+        data[1:7]=[3,0,0,1,0,0,0]
     else:
-        data[1:7] = [4, 1, color.time, 0, 0, 0, 0]
+        data[1:7] = [3, 1, color.time, 0, 0, 0, 0]
     tcp_send(data)
     return colourResponse()
 
@@ -39,9 +39,9 @@ def colour_yellow_handler(color):
 
 def colour_blue_handler(color):
     if color.time==0:
-        data[1:7]=[3,0,0,1,0,0,0]
+        data[1:7]=[4,0,0,1,0,0,0]
     else:
-        data[1:7] = [3, 1, color.time, 0, 0, 0, 0]
+        data[1:7] = [4, 1, color.time, 0, 0, 0, 0]
     tcp_send(data)
     return colourResponse()
 
@@ -77,17 +77,29 @@ def strg_hor_handler(pos):
     tcp_send(data)
     return motorResponse()
 
+def magnet1_handler(magnet):
+    data[1:7] = [10, 1, magnet.release, 0, 0, 0, 0]
+    tcp_send(data)
+    return magnetResponse()
+
+def magnet2_handler(magnet):
+    data[1:7] = [10, 2, magnet.release, 0, 0, 0, 0]
+    tcp_send(data)
+    return magnetResponse()
+
 def tcp_plc_server():
-    rospy.init_node('tcp_plc_server')
-    col_r = rospy.Service( 'colour_station/red' , colour , colour_red_handler )
-    col_bk = rospy.Service( '/colour_station/black' , colour, colour_black_handler )
-    col_y = rospy.Service( '/colour_station/yellow', colour , colour_yellow_handler )
-    col_bl = rospy.Service( '/colour_station/blue' , colour , colour_blue_handler )
-    dos = rospy.Service('/doser', doser , doser_handler)
-    dos_ver = rospy.Service('/doser_mixer_vertical', motor, dsr_mix_ver_handler)
-    strg_ver = rospy.Service('/storage/vertical', motor, strg_ver_handler)
-    strg_hor = rospy.Service('/storage/horizontal', motor, strg_hor_handler)
-    print("TCP_PLC_Data Service Ready")
+    rospy.init_node('pipeless_plant_plc')
+    col_r = rospy.Service( '~filling_station/red' , colour , colour_red_handler )
+    col_bk = rospy.Service( '~filling_station/black' , colour, colour_black_handler )
+    col_y = rospy.Service( '~filling_station/yellow', colour , colour_yellow_handler )
+    col_bl = rospy.Service( '~filling_station/blue' , colour , colour_blue_handler )
+    dos = rospy.Service('~doser', doser , doser_handler)
+    dos_ver = rospy.Service('~doser_mixer_vertical', motor, dsr_mix_ver_handler)
+    strg_ver = rospy.Service('~storage/vertical', motor, strg_ver_handler)
+    strg_hor = rospy.Service('~storage/horizontal', motor, strg_hor_handler)
+    mags1 = rospy.Service('~magnets/doser_mixer', magnet, magnet1_handler)
+    mags2 = rospy.Service('~magnets/storage', magnet, magnet2_handler)
+    rospy.loginfo("Pipeless Plant PLC Services Ready")
     rospy.spin()
 
 if __name__=="__main__":

@@ -9,9 +9,7 @@ project(pipeless_plant_bringup)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   ueye_cam
-  aruco_detect
-  fiducial_slam
-  robot_localization
+  ceiling_cam_fiducials_odom_ekf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -21,7 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-catkin_python_setup()
+# catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -106,7 +104,7 @@ catkin_python_setup()
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pipeless_plant_bringup
-  CATKIN_DEPENDS ueye_cam aruco_detect fiducial_slam robot_localization
+  CATKIN_DEPENDS ueye_cam ceiling_cam_fiducials_odom_ekf
 #  DEPENDS system_lib
 )
 
