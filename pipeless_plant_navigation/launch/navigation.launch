@@ -1,4 +1,5 @@
 <launch>
   <include file="$(find pipeless_plant_navigation)/launch/move_base.launch"/>
   <include file="$(find pipeless_plant_navigation)/launch/plant_map_server.launch"/>
+  <node name="move_to_station" pkg="pipeless_plant_navigation" type="move_to_station.py" output="screen"/>
 </launch>

@@ -11,7 +11,6 @@
   
   <!-- navigation related-->
   <include file="$(find pipeless_plant_navigation)/launch/navigation.launch" />
-  <node name="move_to_station" pkg="pipeless_plant_navigation" type="move_to_station.py" output="screen"/>
   
   <!-- PLC node -->
   <node name="pipeless_plant_plc" pkg="pipeless_plant_plc_controller" type="tcp_plc_server.py" output="screen"/>
