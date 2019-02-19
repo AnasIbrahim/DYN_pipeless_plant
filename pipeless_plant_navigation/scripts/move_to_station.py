@@ -8,41 +8,40 @@ from geometry_msgs.msg import *
 
 def mixing_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.7
-    goal.position.y = 0.0
-    goal.orientation.z = 0.037
+    goal.position.x = 0.72
+    goal.position.y = 0.015
+    goal.orientation.z = -0.004
     goal.orientation.w = 0.999
     send_goal(goal)
 
 def storage_station_handle(req):
     goal = Pose()
-    goal.position.x = -0.7
+    goal.position.x = -0.685
     goal.position.y = 0.0
     goal.orientation.z = 0.999
-    goal.orientation.w = 0.01
+    goal.orientation.w = 0.04
     send_goal(goal)
 
 def black_yellow_filling_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.04
-    goal.position.y = -1.15
-    goal.orientation.z = -0.689
-    goal.orientation.w = 0.724
+    goal.position.x = 0.02
+    goal.position.y = -1.10
+    goal.orientation.z = -0.698
+    goal.orientation.w = 0.715
     send_goal(goal)
 
 def red_blue_filling_station_handle(req):
     goal = Pose()
-    goal.position.x = -0.05 
-    goal.position.y = 1.13
-    goal.orientation.z = 0.7
-    goal.orientation.w = 0.713
+    goal.position.x = -0.01 
+    goal.position.y = 1.09
+    goal.orientation.z = 0.715
+    goal.orientation.w = 0.69
     send_goal(goal)
 
 def send_goal(pose):
     rospy.loginfo("sending a goal")
     move_base_client = actionlib.SimpleActionClient('move_base', move_base_msgs.msg.MoveBaseAction)
     move_base_client.wait_for_server()
-    move_base_client.cancel_all_goals()
     goal = MoveBaseGoal()
     goal.target_pose.header.frame_id = 'odom'
     goal.target_pose.pose = pose
