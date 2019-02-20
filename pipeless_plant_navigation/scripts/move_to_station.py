@@ -17,6 +17,7 @@ def mixing_station_handle(req):
     goal.orientation.z = -0.004
     goal.orientation.w = 0.999
     send_goal(goal)
+    return EmptyResponse()
 
 def storage_station_handle(req):
     goal = Pose()
@@ -25,6 +26,7 @@ def storage_station_handle(req):
     goal.orientation.z = 0.999
     goal.orientation.w = 0.04
     send_goal(goal)
+    return EmptyResponse()
 
 def black_yellow_filling_station_handle(req):
     goal = Pose()
@@ -33,6 +35,7 @@ def black_yellow_filling_station_handle(req):
     goal.orientation.z = -0.698
     goal.orientation.w = 0.715
     send_goal(goal)
+    return EmptyResponse()
 
 def red_blue_filling_station_handle(req):
     goal = Pose()
@@ -41,6 +44,7 @@ def red_blue_filling_station_handle(req):
     goal.orientation.z = 0.715
     goal.orientation.w = 0.69
     send_goal(goal)
+    return EmptyResponse()
 
 def send_goal(pose):
     rospy.loginfo("sending a goal")
