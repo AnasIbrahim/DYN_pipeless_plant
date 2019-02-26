@@ -7,42 +7,43 @@ import actionlib
 from geometry_msgs.msg import *
 import tf
 from nav_msgs.msg import *
+import math
 
 global vel_pub, yaw_current
 
 def mixing_station_handle(req):
     goal = Pose()
-    goal.position.x = 0.72
-    goal.position.y = 0.015
-    goal.orientation.z = -0.004
+    goal.position.x = 0.93 #0.77#0.72
+    goal.position.y = 0.023#0.015
+    goal.orientation.z = -0.007
     goal.orientation.w = 0.999
     send_goal(goal)
     return EmptyResponse()
 
 def storage_station_handle(req):
     goal = Pose()
-    goal.position.x = -0.685
-    goal.position.y = 0.0
-    goal.orientation.z = 0.999
-    goal.orientation.w = 0.04
+    goal.position.x = -0.76#-0.685#-0.685
+    goal.position.y = 0.003
+    goal.orientation.z = -0.999
+    goal.orientation.w = 0.028
     send_goal(goal)
     return EmptyResponse()
 
 def black_yellow_filling_station_handle(req):
     goal = Pose()
     goal.position.x = 0.02
-    goal.position.y = -1.10
-    goal.orientation.z = -0.698
-    goal.orientation.w = 0.715
+    goal.position.y = -1.24
+    goal.orientation.z = -0.707#-0.698
+    goal.orientation.w = 0.706#0.715
     send_goal(goal)
     return EmptyResponse()
 
 def red_blue_filling_station_handle(req):
     goal = Pose()
-    goal.position.x = -0.01 
-    goal.position.y = 1.09
-    goal.orientation.z = 0.715
-    goal.orientation.w = 0.69
+    goal.position.x = -0.03 
+    goal.position.y = 1.28
+    goal.orientation.z = 0.705
+    goal.orientation.w = 0.702
     send_goal(goal)
     return EmptyResponse()
 
@@ -66,23 +67,44 @@ def reach_exact_yaw(goal):
     yaw_goal = goal_angles[2]
     rospy.loginfo("yaw_goal" + str(yaw_goal))
     twist_msg = Twist()
-    yaw_speed = 0.1
+    yaw_speed = 0.055#0.1
     #rotate till angle reached
-    tolerance = 0.005
+    tolerance = 0.001#0.005
     r = rospy.Rate(5)
     while(yaw_goal > yaw_current+tolerance or yaw_goal < yaw_current-tolerance):
         rospy.loginfo(str(yaw_current))
-        if(yaw_goal > yaw_current):
-            twist_msg.angular.z = yaw_speed
-            vel_pub.publish(twist_msg)
-            rospy.loginfo("+z direction")
-        elif(yaw_goal < yaw_current):
-            twist_msg.angular.z = -yaw_speed
-            vel_pub.publish(twist_msg)
-            rospy.loginfo("-z direction")
+        if((yaw_goal > 3*math.pi/4) or (yaw_goal < -3*math.pi/4)):
+            if(yaw_goal>0 and yaw_current<0):
+                twist_msg.angular.z = -yaw_speed
+                vel_pub.publish(twist_msg)
+                rospy.loginfo("-z direction")
+            elif(yaw_goal<0 and yaw_current>0):
+                twist_msg.angular.z = yaw_speed
+                vel_pub.publish(twist_msg)
+                rospy.loginfo("+z direction")
+            else:
+                if(yaw_goal > yaw_current):
+                    twist_msg.angular.z = yaw_speed
+                    vel_pub.publish(twist_msg)
+                    rospy.loginfo("+z direction")
+                elif(yaw_goal < yaw_current):
+                    twist_msg.angular.z = -yaw_speed
+                    vel_pub.publish(twist_msg)
+                    rospy.loginfo("-z direction")
+        else:
+            if(yaw_goal > yaw_current):
+                twist_msg.angular.z = yaw_speed
+                vel_pub.publish(twist_msg)
+                rospy.loginfo("+z direction")
+            elif(yaw_goal < yaw_current):
+                twist_msg.angular.z = -yaw_speed
+                vel_pub.publish(twist_msg)
+                rospy.loginfo("-z direction")
         r.sleep()
+    rospy.loginfo("exact angle reached")    
     twist_msg.angular.z = 0
     vel_pub.publish(twist_msg)
+    rospy.loginfo(str(yaw_current))
 
 def odom_callback(data):
     global yaw_current
@@ -106,9 +128,7 @@ def main_program():
     rospy.sleep(1) #wait till yaw is read at least once - TODO: implement it in a cleaner way
     #test
     #goal = Pose()
-    #goal.position.x = 0.72
-    #goal.position.y = 0.015
-    #goal.orientation.z = -0.004
+    #goal.orientation.z = -0.007
     #goal.orientation.w = 0.999
     #reach_exact_yaw(goal)
 

@@ -58,7 +58,7 @@ class RobotPublisher:
 
     def dock(self,robotIndex):
         # Checking if the movement is forward or backwards
-        distance = 0.5
+        distance = 0.4
         speed = 0.08
         self.vel_msg.linear.x = abs(speed)
         # Since we are moving just in x-axis

@@ -20,7 +20,7 @@ def undocking_handler(req):
     global vel_pub, twist_msg
     twist_msg.linear.x = -0.1
     r = rospy.Rate(10)
-    for x in range(0, 50):
+    for x in range(0, 65):
         vel_pub.publish(twist_msg)
         r.sleep()
     return EmptyResponse()
