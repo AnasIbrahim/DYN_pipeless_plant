@@ -105,5 +105,14 @@ class RobotPublisher:
         self.velocity_publisher.publish(self.vel_msg)
 
 
+    def stop(self,robotIndex):
+        self.vel_msg.linear.x = 0
+        self.vel_msg.linear.y = 0
+        self.vel_msg.linear.z = 0
+        self.vel_msg.angular.x = 0
+        self.vel_msg.angular.y = 0
+        self.vel_msg.angular.z = 0
+        # Publish the velocity
+        self.velocity_publisher.publish(self.vel_msg)
 
 

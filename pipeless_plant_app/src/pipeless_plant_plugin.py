@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import rospy
 import rospkg
@@ -6,7 +8,7 @@ import time
 import Tkinter as tk
 import  tkMessageBox as msgBox
 
-from qt_gui.plugin import Plugin
+
 from python_qt_binding import *
 from python_qt_binding.QtCore import *
 from python_qt_binding.QtWidgets import *
@@ -36,29 +38,15 @@ from std_srvs.srv import *
 #from pynput.keyboard import Key
 
 
-class PipelessPlantPlugin(Plugin):
+class PipelessPlantPlugin():
 
-    def __init__(self, context):
-        super(PipelessPlantPlugin, self).__init__(context)
-        # Give QObjects reasonable names
-        self.setObjectName('PipelessPlantPlugin')
+    def __init__(self):
 
-        # Process standalone plugin command-line arguments
-        from argparse import ArgumentParser
-        parser = ArgumentParser()
-        # Add argument(s) to the parser.
-        parser.add_argument("-q", "--quiet", action="store_true",
-                      dest="quiet",
-                      help="Put plugin in silent mode")
-        args, unknowns = parser.parse_known_args(context.argv())
-        if not args.quiet:
-            print 'arguments: ', args
-            print 'unknowns: ', unknowns
-
-        # Create QWidget
+     	rospy.init_node('ca_driver', anonymous=True)
+   # Create QWidget
         self._widget = QWidget()
         # Get path to UI file which should be in the "resource" folder of this package
-        ui_file = os.path.join(rospkg.RosPack().get_path('pipeless_plant_rqt'), 'resource', 'pipeless_plant_plugin.ui')
+        ui_file = os.path.join(rospkg.RosPack().get_path('pipeless_plant_app'), 'src', 'pipeless_plant_plugin.ui')
         # Extend the widget with all attributes and children from UI file
         loadUi(ui_file, self._widget)
         # Give QObjects reasonable names
@@ -88,13 +76,13 @@ class PipelessPlantPlugin(Plugin):
         self.position_sub = rospy.Subscriber("/odometry/filtered", Odometry, self.positionCallback)
 
         self.robot= self._widget.robots_comboBox.currentText()
-        self._widget.robots_comboBox.currentIndexChanged.connect(self._handle_robot_indexChanged)
+        self._widget.robots_comboBox.currentIndexChanged[int].connect(self._handle_robot_indexChanged)
 
 
     ## Filling
         self._widget.fillingRun_button.clicked[bool].connect(self._handle_fillingRun_clicked)
         self._widget.fillingStop_button.clicked[bool].connect(self._handle_fillingStop_clicked)
-        validator = QtGui.QIntValidator(0, 255, self)
+        validator = QtGui.QIntValidator(0, 255, self._widget)
         self._widget.fillingDuration_lineEdit.setValidator(validator)
 
     ## Dosing & Mixing
@@ -111,49 +99,31 @@ class PipelessPlantPlugin(Plugin):
     ## Storage
         self._widget.storageHorizontalGo_button.clicked[bool].connect(self._handle_storageHorizontalGo_clicked)
         self._widget.storageVerticalGo_button.clicked[bool].connect(self._handle_storageVerticalGo_clicked)
-        self._widget.storageEmergencyStop_button.clicked[bool].connect(self._handle_storageEmergencyStop_clicked)
+	self._widget.storageHorizontalStop_button.clicked[bool].connect(self._handle_storageHorizontalStop_clicked)
+        self._widget.storageVerticalStop_button.clicked[bool].connect(self._handle_storageVerticalStop_clicked)
         self._widget.storageMagnetOn_button.clicked[bool].connect(self._handle_storageMagnetOn_clicked)
         self._widget.storageMagnetOff_button.clicked[bool].connect(self._handle_storageMagnetOff_clicked)
 
 
 
+    ## Emergency Stop
+        self._widget.emergencyStop_button.clicked[bool].connect(self._handle_emergencyStop_clicked)
 
     ## Automatic Mode
         self._widget.autoStart_button.clicked[bool].connect(self._handle_autoStart_clicked)
+	self._widget.autoStatus_label.setText(" ")
         self._widget.auto_label.setText(" This is a demo for automatic mode. \n When you click (Start), "+
-                                        "The Robot will got to station 1 and the cup will" +
-                                        " be filled with blue for 10 \n seconds, then it will go to station "+
-                                        "2 and the cup will be filled with Yellow for 5 Seconds.\n " +
-                                        "Then it will go to the mixing station and start mixing for 20 seconds.\n"+
+                                        "The Robot will start from the storage station and the station will put a cup \n on the robot then the robot will go to station 1 and the cup will" +
+                                        " be filled with yellow for 10 seconds and \n black for 5 seconds Then it will go to the mixing station and start mixing for 20 seconds.\n"+
                                         " Then The cup will be stored in position 1 in the Storage Station.")
 
         root = tk.Tk().withdraw()
-        self.robot= RobotPublisher()
-
+        self.robotPublisher= RobotPublisher()
         self._widget.show()
-        if context.serial_number() > 1:
-            self._widget.setWindowTitle(self._widget.windowTitle() + (' (%d)' % context.serial_number()))
-        # Add widget to the user interface
-        context.add_widget(self._widget)
-
-    def shutdown_plugin(self):
-        # TODO unregister all publishers here
-        pass
-
-    def save_settings(self, plugin_settings, instance_settings):
-        # TODO save intrinsic configuration, usually using:
-        # instance_settings.set_value(k, v)
-        pass
-
-    def restore_settings(self, plugin_settings, instance_settings):
-        # TODO restore intrinsic configuration, usually using:
-        # v = instance_settings.value(k)
-        pass
 
 
 ## Camera Handlers
     def cameraCallback(self,data):
-
         try:
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
@@ -188,33 +158,32 @@ class PipelessPlantPlugin(Plugin):
         theta = yaw * 180 * 7 /22
         self._widget.angleValue_label.setText(str("%.1f" % theta) )
 
-
     def _handle_moveForward_pressed(self):
         try:
-            self.robot.moveForward(self.robot)
+            self.robotPublisher.moveForward(self.robot)
         except rospy.ServiceException, e:
             print "Move Forward failed: %s" % e
 
 
     def _handle_moveBackward_pressed(self):
         try:
-            self.robot.moveBackward(self.robot)
+            self.robotPublisher.moveBackward(self.robot)
         except rospy.ServiceException, e:
             print "Move Forward failed: %s" % e
 
     def _handle_rotateCW_pressed(self):
         try:
-            self.robot.rotateCW(self.robot)
+            self.robotPublisher.rotateCW(self.robot)
         except rospy.ServiceException, e:
             print "Move Forward failed: %s" % e
 
     def _handle_rotateCCW_pressed(self):
         try:
-            self.robot.rotateCCW(self.robot)
+            self.robotPublisher.rotateCCW(self.robot)
         except rospy.ServiceException, e:
             print "Move Forward failed: %s" % e
 
-    def _handle_robot_indexChanged(self):
+    def _handle_robot_indexChanged(self,index):
         self.robot = self._widget.robots_comboBox.currentText()
 
 
@@ -366,20 +335,26 @@ class PipelessPlantPlugin(Plugin):
         except rospy.ServiceException, e:
             print "Filling Run Service call failed: %s" % e
 
-    def _handle_storageEmergencyStop_clicked(self):
-        positionIndex = 0
-        serviceName1 = '/pipeless_plant_plc/storage/vertical'
-        serviceName2 = '/pipeless_plant_plc/storage/horizontal'
-        rospy.wait_for_service(serviceName1)
-        rospy.wait_for_service(serviceName2)
+    def _handle_storageHorizontalStop_clicked(self):
+        serviceName = '/pipeless_plant_plc/storage/horizontal'
+        rospy.wait_for_service(serviceName)
         try:
-            callService1 = rospy.ServiceProxy(serviceName1, motor)
-            callService1(positionIndex)
-            callService2 = rospy.ServiceProxy(serviceName2, motor)
-            callService2(positionIndex)
+            callService = rospy.ServiceProxy(serviceName, motor)
+            callService(0)
 
         except rospy.ServiceException, e:
             print "Filling Run Service call failed: %s" % e
+
+    def _handle_storageVerticalStop_clicked(self):
+        serviceName = '/pipeless_plant_plc/storage/vertical'
+        rospy.wait_for_service(serviceName)
+        try:
+            callService = rospy.ServiceProxy(serviceName, motor)
+            callService(0)
+
+        except rospy.ServiceException, e:
+            print "Filling Run Service call failed: %s" % e
+
 
     def _handle_storageMagnetOn_clicked(self):
         serviceName = '/pipeless_plant_plc/magnets/storage'
@@ -405,6 +380,38 @@ class PipelessPlantPlugin(Plugin):
         except rospy.ServiceException, e:
             print "Filling Run Service call failed: %s" % e
 
+##Emergency Stop
+    def _handle_emergencyStop_clicked(self):
+	rospy.wait_for_service('/pipeless_plant_plc/storage/vertical')
+        rospy.wait_for_service('/pipeless_plant_plc/storage/horizontal')
+        rospy.wait_for_service('/pipeless_plant_plc/doser_mixer_vertical')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/blue')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/yellow')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/black')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/red')
+        rospy.wait_for_service('/pipeless_plant_plc/doser')
+        try:
+            stopStorageV = rospy.ServiceProxy('/pipeless_plant_plc/storage/vertical', motor)            
+            stopStorageH = rospy.ServiceProxy('/pipeless_plant_plc/storage/horizontal', motor)
+            stopMixerV = rospy.ServiceProxy('/pipeless_plant_plc/doser_mixer_vertical', motor)            
+            stopBlue = rospy.ServiceProxy('/pipeless_plant_plc/filling_station/blue', colour)
+	    stopRed = rospy.ServiceProxy('/pipeless_plant_plc/filling_station/red', colour)
+	    stopBlack = rospy.ServiceProxy('/pipeless_plant_plc/filling_station/black', colour)
+	    stopYellow = rospy.ServiceProxy('/pipeless_plant_plc/filling_station/yellow', colour)
+	    stopDoser = rospy.ServiceProxy('/pipeless_plant_plc/doser', doser)
+	    stopStorageV(0)        
+            stopStorageH(0)
+            stopMixerV(0)
+            stopBlue(0)
+	    stopRed(0)
+	    stopBlack(0)
+	    stopYellow(0)
+	    stopDoser(0,0)
+	    self.robotPublisher.stop(self.robot)
+
+        except rospy.ServiceException, e:
+            print "Filling Run Service call failed: %s" % e
+
 ## Automatic Mode Handler
     def _handle_autoStart_clicked(self):
         rospy.wait_for_service('/pipeless_plant_plc/storage/vertical')
@@ -412,8 +419,10 @@ class PipelessPlantPlugin(Plugin):
         rospy.wait_for_service('/pipeless_plant_plc/magnets/storage')
         rospy.wait_for_service('/pipeless_plant_plc/magnets/doser_mixer')
         rospy.wait_for_service('/pipeless_plant_plc/doser_mixer_vertical')
-        rospy.wait_for_service('/pipeless_plant_plc/filling_station/blue')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/black')
         rospy.wait_for_service('/pipeless_plant_plc/filling_station/yellow')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/blue')
+        rospy.wait_for_service('/pipeless_plant_plc/filling_station/red')
         rospy.wait_for_service('/move_to_station/black_yellow_filling_station')
         rospy.wait_for_service('/move_to_station/red_blue_filling_station')
         rospy.wait_for_service('/move_to_station/storage_station')
@@ -440,6 +449,7 @@ class PipelessPlantPlugin(Plugin):
             dosing = rospy.ServiceProxy('/pipeless_plant_plc/doser', doser)
 
 ##storage
+	    self._widget.autoStatus_label.setText("Storage station get cup from slot 3")
             storageMagnet(0)
             time.sleep(1)
             storageHorizontal(7)
@@ -447,13 +457,15 @@ class PipelessPlantPlugin(Plugin):
             storageVertical(3)
             time.sleep(5)
             #goToStorage()
-            #self.robot.dock(self.robot)
+            #self.robotPublisher.dock(self.robot)
             #dock()
             #time.sleep(3)
+
             storageHorizontal(3)
             time.sleep(5)
             storageVertical(2)
             time.sleep(8)
+	    self._widget.autoStatus_label.setText("Storage station put the cup on the robot")
             storageVertical(3)
             time.sleep(8)
             storageHorizontal(7)
@@ -466,15 +478,20 @@ class PipelessPlantPlugin(Plugin):
             time.sleep(8)
             storageMagnet(0)
             time.sleep(1)
+	    self._widget.autoStatus_label.setText("Undocking from Storage Station")
             undock()
 
 ##yellow & black
+	    self._widget.autoStatus_label.setText("Robot goes to yellow_black filling station")
             goToYellow()
             dock()
-            callYellow(5)
+	    self._widget.autoStatus_label.setText("filling yellow starts for 10 seconds")
+            callYellow(10)
             time.sleep(3)
+	    self._widget.autoStatus_label.setText("filling black starts for 5 seconds")
             callBlack(5)
             time.sleep(8)
+	    self._widget.autoStatus_label.setText("Undocking from filling Station")
             undock()
 
 ##blue & red
@@ -487,33 +504,41 @@ class PipelessPlantPlugin(Plugin):
 #            undock()
 
 ##mixing
-            mixerMagnet(0)
-            time.sleep(1)
             mixerVertical(2)
             time.sleep(7)
+	    self._widget.autoStatus_label.setText("Robot goes to mixingstation")
             goToMixing()
             dock()
+	    self._widget.autoStatus_label.setText("Mixing station holds the cup from the robot")
             mixerVertical(1)
             time.sleep(10)
+            mixerMagnet(0)
+            time.sleep(2)	    
             mixerVertical(2)
             time.sleep(10)
-            dosing(5,180)
+            dosing(5,7)
+	    self._widget.autoStatus_label.setText("mixing starts for 8 seconds")
             time.sleep(8)
+	    self._widget.autoStatus_label.setText("returning the cup back to the robot")
             mixerVertical(1)
             time.sleep(10)
             mixerMagnet(1)
             time.sleep(2)
             mixerVertical(2)
             time.sleep(7)
+	    self._widget.autoStatus_label.setText("Undocking from mixing Station")
             undock()
 
 ##storage again
+	    self._widget.autoStatus_label.setText("Robot goes to storage station")
             goToStorage()
             dock()
+	    self._widget.autoStatus_label.setText("Storage station removes the cup from the robot")
             storageVertical(1)
             time.sleep(12)
             storageVertical(3)
             time.sleep(15)
+	    self._widget.autoStatus_label.setText("Storage station put the cup back to slot 3")
             storageHorizontal(3)
             time.sleep(7)
             storageVertical(2)
@@ -541,3 +566,8 @@ class PipelessPlantPlugin(Plugin):
 #    with Listener(on_press=on_press) as listener:
 #        listener.join()
 
+
+if __name__=="__main__":
+    app = QApplication(sys.argv)	
+    x = PipelessPlantPlugin()
+    sys.exit(app.exec_())

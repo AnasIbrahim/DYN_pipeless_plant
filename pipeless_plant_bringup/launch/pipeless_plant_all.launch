@@ -16,4 +16,8 @@
   <!-- PLC node -->
   <node name="pipeless_plant_plc" pkg="pipeless_plant_plc_controller" type="tcp_plc_server.py" output="screen"/>
 
+
+  <!-- Gui -->
+  <node name="pipeless_plant_app" pkg="pipeless_plant_app" type="pipeless_plant_plugin.py" output="screen"/>
+
 </launch>
