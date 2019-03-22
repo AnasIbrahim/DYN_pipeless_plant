@@ -49,7 +49,7 @@ def doser_handler(dose):
     if dose.time==0:
         data[1:7]=[8,0,0,0,0,0,0]
     else:
-        data[1:7] = [8, 1, dose.time, dose.speed, 0, 0, 0]
+        data[1:7] = [8, 1, dose.time, dose.speed*25, 0, 0, 0]
     tcp_send(data)
     return doserResponse()
 
