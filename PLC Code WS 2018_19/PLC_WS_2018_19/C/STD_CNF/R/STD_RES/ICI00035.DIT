@@ -28,19 +28,19 @@ Q_0_1_1_0	3	VAR_EXTERNAL	@TYP:1
 
 @V 1 17 0
 V1_OpenFor	4	VAR_EXTERNAL	@TYP:12
-@RV 134		     
+@RV 127		     
 
 ;
 
 @V 1 18 0
 V1_Open	5	VAR_EXTERNAL	@TYP:1
-@RV 135		     
+@RV 128		     
 
 ;
 
 @V 1 19 0
 V1_Close	6	VAR_EXTERNAL	@TYP:1
-@RV 143		     
+@RV 136		     
 
 ;
 
@@ -64,19 +64,19 @@ OpenValve_2	9	VAR	@FB:36
 
 @V 1 31 0
 V2_OpenFor	10	VAR_EXTERNAL	@TYP:12
-@RV 136		     
+@RV 129		     
 
 ;
 
 @V 1 32 0
 V2_Open	11	VAR_EXTERNAL	@TYP:1
-@RV 137		     
+@RV 130		     
 
 ;
 
 @V 1 33 0
 V2_Close	12	VAR_EXTERNAL	@TYP:1
-@RV 144		     
+@RV 137		     
 
 ;
 
@@ -106,37 +106,37 @@ OpenValve_4	16	VAR	@FB:36
 
 @V 1 46 0
 V3_OpenFor	17	VAR_EXTERNAL	@TYP:12
-@RV 138		     
+@RV 131		     
 
 ;
 
 @V 1 47 0
 V3_Open	18	VAR_EXTERNAL	@TYP:1
-@RV 139		     
+@RV 132		     
 
 ;
 
 @V 1 48 0
 V3_Close	19	VAR_EXTERNAL	@TYP:1
-@RV 145		     
+@RV 138		     
 
 ;
 
 @V 1 49 0
 V4_OpenFor	20	VAR_EXTERNAL	@TYP:12
-@RV 140		     
+@RV 133		     
 
 ;
 
 @V 1 50 0
 V4_Open	21	VAR_EXTERNAL	@TYP:1
-@RV 141		     
+@RV 134		     
 
 ;
 
 @V 1 51 0
 V4_Close	22	VAR_EXTERNAL	@TYP:1
-@RV 146		     
+@RV 139		     
 
 ;
 

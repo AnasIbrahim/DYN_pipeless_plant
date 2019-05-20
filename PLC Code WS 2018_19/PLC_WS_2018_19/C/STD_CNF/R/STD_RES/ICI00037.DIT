@@ -10,7 +10,7 @@ QFBI: 3
 *)
 @V 1 6 0
 arrRcvBuf	1	VAR_EXTERNAL	@TYP:1024
-@RV 132		     
+@RV 125		     
 
 ;
 
@@ -34,37 +34,37 @@ IP_USEND_1	4	VAR	@FB:47
 
 @V 1 18 0
 SendRequest	5	VAR_EXTERNAL	@TYP:1
-@RV 198		     
+@RV 153		     
 
 ;
 
 @V 1 19 0
 arrSndBuf	6	VAR_EXTERNAL	@TYP:1024
-@RV 133		     
+@RV 126		     
 
 ;
 
 @V 1 20 0
 IPSendError	7	VAR_EXTERNAL	@TYP:1
-@RV 149		     
+@RV 142		     
 
 ;
 
 @V 1 21 0
 NewDataReceived	8	VAR_EXTERNAL	@TYP:1
-@RV 152		     
+@RV 143		     
 
 ;
 
 @V 1 22 0
 IPReceiveError	9	VAR_EXTERNAL	@TYP:1
-@RV 148		     
+@RV 141		     
 
 ;
 
 @V 1 23 0
 IPConnectError	10	VAR_EXTERNAL	@TYP:1
-@RV 147		     
+@RV 140		     
 
 ;
 

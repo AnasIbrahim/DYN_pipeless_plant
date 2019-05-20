@@ -23,7 +23,7 @@
   <Assembly Name="eclrlib" Version="2.3.0" IsNative="true" />
   <Assembly Name="Iec61131Standard" Version="1.7.0" IsNative="false" />
   <Assembly Name="dummyio" Version="1.4.0" IsNative="false" />
-  <DeviceDescription CPUType="769" MaximumProgramSize="589824" MaximumDataSize="196604" MaximumRetainDataSize="8184" MaximumImageSize="4194304" MaximumImageFilesSize="131072" IsDownloadChangesCapable="true" ScheduleInterval="1000" ThreadingPriorityLevel="19" ThreadingType="Preemptive" LogicAnalyzerState="Inactive">
+  <DeviceDescription CPUType="769" MaximumProgramSize="589824" MaximumDataSize="196604" MaximumRetainDataSize="8184" MaximumImageSize="4194304" MaximumImageFilesSize="131072" IsDownloadChangesCapable="true" ScheduleInterval="1000" ThreadingPriorityLevel="19" ThreadingType="Preemptive" LogicAnalyzerState="Inactive" RedundancyRole="">
     <Assembly Name="mscorlib" Version="2.4.0" IsNative="true" />
     <Assembly Name="eclrlib" Version="2.3.0" IsNative="true" />
     <Assembly Name="pcoslib" Version="2.5.0" IsNative="true" />

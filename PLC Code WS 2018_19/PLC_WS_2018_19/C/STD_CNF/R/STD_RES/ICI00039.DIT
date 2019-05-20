@@ -22,7 +22,7 @@ RS_1	2	VAR	@FB:44
 
 @V 1 12 0
 MixStart	3	VAR_EXTERNAL	@TYP:1
-@RV 153		     
+@RV 144		     
 
 ;
 
@@ -34,7 +34,7 @@ Q_0_1_0_2	4	VAR_EXTERNAL	@TYP:1
 
 @V 1 14 0
 MixFor	5	VAR_EXTERNAL	@TYP:12
-@RV 156		     
+@RV 145		     
 
 ;
 
@@ -46,13 +46,13 @@ TON_2	6	VAR	@FB:45
 
 @V 1 24 0
 DoseStart	7	VAR_EXTERNAL	@TYP:1
-@RV 188		     
+@RV 152		     
 
 ;
 
 @V 1 25 0
 DoseFor	8	VAR_EXTERNAL	@TYP:12
-@RV 158		     
+@RV 147		     
 
 ;
 
@@ -70,7 +70,7 @@ Q_0_3_1_1_1_SPANNUNGSAUSGANG	10	VAR_EXTERNAL	@TYP:18
 
 @V 1 36 0
 DoseSpeed	11	VAR_EXTERNAL	@TYP:18
-@RV 157		     
+@RV 146		     
 
 ;
 

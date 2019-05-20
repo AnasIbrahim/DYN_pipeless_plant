@@ -10,13 +10,13 @@ QFBI: 0
 *)
 @V 1 6 0
 Sensors_1_2	1	VAR_EXTERNAL	@TYP:1
-@RV 182		     
+@RV 151		     
 
 ;
 
 @V 1 7 0
 Sensors_3_4	2	VAR_EXTERNAL	@TYP:1
-@RV 179		     
+@RV 149		     
 
 ;
 
@@ -70,13 +70,13 @@ ONBOARD_OUTPUT_BIT3	10	VAR_EXTERNAL	@TYP:1
 
 @V 1 16 0
 Release_Magnets_1_2_3_4	11	VAR_EXTERNAL	@TYP:1
-@RV 180		     
+@RV 150		     
 
 ;
 
 @V 1 17 0
 Release_Magnets_5_6_7_8	12	VAR_EXTERNAL	@TYP:1
-@RV 177		     
+@RV 148		     
 
 ;
 

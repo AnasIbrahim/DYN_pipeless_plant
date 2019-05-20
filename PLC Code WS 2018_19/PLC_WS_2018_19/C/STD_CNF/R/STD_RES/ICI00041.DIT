@@ -10,7 +10,7 @@ QFBI: 0
 *)
 @V 1 6 0
 MixVertPos	1	VAR_EXTERNAL	@TYP:3
-@RV 209		     
+@RV 157		     
 
 ;
 
@@ -34,7 +34,7 @@ Q_0_2_0_1	4	VAR_EXTERNAL	@TYP:1
 
 @V 1 10 0
 Q_0_2_0_3	5	VAR_EXTERNAL	@TYP:1
-@RV 119		     
+@RV 112		     
 
 ;
 

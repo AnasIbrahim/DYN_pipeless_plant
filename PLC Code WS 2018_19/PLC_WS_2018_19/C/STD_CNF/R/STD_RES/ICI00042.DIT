@@ -10,37 +10,37 @@ QFBI: 0
 *)
 @V 1 6 0
 Q_0_2_1_1	1	VAR_EXTERNAL	@TYP:1
-@RV 125		     
+@RV 118		     
 
 ;
 
 @V 1 7 0
 Q_0_2_1_3	2	VAR_EXTERNAL	@TYP:1
-@RV 127		     
+@RV 120		     
 
 ;
 
 @V 1 8 0
 Q_0_2_1_4	3	VAR_EXTERNAL	@TYP:1
-@RV 128		     
+@RV 121		     
 
 ;
 
 @V 1 9 0
 Q_0_2_1_6	4	VAR_EXTERNAL	@TYP:1
-@RV 130		     
+@RV 123		     
 
 ;
 
 @V 1 10 0
 StrgVertPos	5	VAR_EXTERNAL	@TYP:3
-@RV 207		     
+@RV 156		     
 
 ;
 
 @V 1 11 0
 StrgHortPos	6	VAR_EXTERNAL	@TYP:3
-@RV 205		     
+@RV 159		     
 
 ;
 

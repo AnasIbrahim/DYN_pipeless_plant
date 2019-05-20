@@ -58,7 +58,7 @@ RS_2	8	VAR	@FB:44
 
 @V 1 34 0
 Close_All_Valves	9	VAR_EXTERNAL	@TYP:1
-@RV 142		     
+@RV 135		     
 
 ;
 
