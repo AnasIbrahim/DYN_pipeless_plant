@@ -6,14 +6,14 @@ from pipeless_plant_plc_controller.srv import *
 
 data = bytearray(9)
 
-def tcp_send(tx):
+def tcp_send(tx):        # function for sending provided data to the PLC
     plc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    plc.connect(('192.168.0.130', 8000))
+    plc.connect(('192.168.0.130', 8000))  # fixed IP address of the PLC (update here if changed)
     plc.send(tx)
     plc.close()
     return
 
-def colour_red_handler(color):
+def colour_red_handler(color):  # function for Red Colour Valve data
     if color.time==0:
         data[1:7]=[3,0,0,1,0,0,0]
     else:
@@ -21,7 +21,7 @@ def colour_red_handler(color):
     tcp_send(data)
     return colourResponse()
 
-def colour_black_handler(color):
+def colour_black_handler(color): # function for Black Colour Valve data
     if color.time==0:
         data[1:7]=[2,0,0,1,0,0,0]
     else:
@@ -29,7 +29,7 @@ def colour_black_handler(color):
     tcp_send(data)
     return colourResponse()
 
-def colour_yellow_handler(color):
+def colour_yellow_handler(color):  # function for Yellow Colour Valve data
     if color.time==0:
         data[1:7]=[1,0,0,1,0,0,0]
     else:
@@ -37,7 +37,7 @@ def colour_yellow_handler(color):
     tcp_send(data)
     return colourResponse()
 
-def colour_blue_handler(color):
+def colour_blue_handler(color):  # function for Blue Colour Valve data
     if color.time==0:
         data[1:7]=[4,0,0,1,0,0,0]
     else:
@@ -45,7 +45,7 @@ def colour_blue_handler(color):
     tcp_send(data)
     return colourResponse()
 
-def doser_handler(dose):
+def doser_handler(dose):  # function for Doser Unit data
     if dose.time==0:
         data[1:7]=[8,0,0,0,0,0,0]
     else:
@@ -53,7 +53,7 @@ def doser_handler(dose):
     tcp_send(data)
     return doserResponse()
 
-def dsr_mix_ver_handler(pos):
+def dsr_mix_ver_handler(pos): # function for Dosing & Mixing Station - Vertical Motor data
     if pos.position==0:
         data[1:7]=[9,0,0,1,0,0,0]
     else:
@@ -61,7 +61,7 @@ def dsr_mix_ver_handler(pos):
     tcp_send(data)
     return motorResponse()
 
-def strg_ver_handler(pos):
+def strg_ver_handler(pos): # function for Storage Station - Vertical Motor data
     if pos.position==0:
         data[1:7]=[5,0,0,1,0,0,0]
     else:
@@ -69,7 +69,7 @@ def strg_ver_handler(pos):
     tcp_send(data)
     return motorResponse()
 
-def strg_hor_handler(pos):
+def strg_hor_handler(pos): # function for Storage Station - Horizontal Motor data
     if pos.position==0:
         data[1:7]=[6,0,0,1,0,0,0]
     else:
@@ -77,12 +77,12 @@ def strg_hor_handler(pos):
     tcp_send(data)
     return motorResponse()
 
-def magnet1_handler(magnet):
+def magnet1_handler(magnet): # function for Dosing & Mixing Station - Magnets data
     data[1:7] = [10, 1, magnet.release, 0, 0, 0, 0]
     tcp_send(data)
     return magnetResponse()
 
-def magnet2_handler(magnet):
+def magnet2_handler(magnet): # function for Storage Station - Magnets data
     data[1:7] = [10, 2, magnet.release, 0, 0, 0, 0]
     tcp_send(data)
     return magnetResponse()
